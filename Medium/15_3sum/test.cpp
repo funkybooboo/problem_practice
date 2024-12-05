@@ -8,65 +8,147 @@ protected:
     Solution solution;
 };
 
+// Test Case 1: Example from the problem statement
 TEST_F(SolutionTest, TestExample1)
 {
-    const std::vector height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
-    EXPECT_EQ(solution.maxArea(height), 49);
+    std::vector nums = { -1, 0, 1, 2, -1, -4 };
+    const std::vector<std::vector<int>> expected = {
+        {-1, -1, 2},
+        {-1, 0, 1}
+    };
+
+    std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    // Check if the result matches the expected output
+    ASSERT_EQ(result.size(), expected.size());
+
+    // Check if each triplet is in the result
+    for (const auto& triplet : expected) {
+        ASSERT_TRUE(std::ranges::find(result.begin(), result.end(), triplet) != result.end());
+    }
 }
 
+// Test Case 2: Case with no valid triplets
 TEST_F(SolutionTest, TestExample2)
 {
-    const std::vector height = {1, 1};
-    EXPECT_EQ(solution.maxArea(height), 1);
+    std::vector nums = { 0, 1, 1 };
+    constexpr std::vector<std::vector<int>> expected = {};
+
+    const std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result, expected);
 }
 
-TEST_F(SolutionTest, TestSingleElement)
+// Test Case 3: Case where all elements are zero
+TEST_F(SolutionTest, TestExample3)
 {
-    const std::vector height = {10};
-    // With only one line, no container can be formed
-    EXPECT_EQ(solution.maxArea(height), 0);
+    std::vector nums = { 0, 0, 0 };
+    const std::vector<std::vector<int>> expected = {
+        { 0, 0, 0 }
+    };
+
+    const std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result.size(), expected.size());
+    ASSERT_EQ(result[0], expected[0]);
 }
 
-TEST_F(SolutionTest, TestEqualHeight)
+// Test Case 4: Case with no triplets (all positive numbers)
+TEST_F(SolutionTest, TestAllPositive)
 {
-    const std::vector height = {5, 5, 5, 5, 5};
-    // The largest container will be between the first and last lines
-    EXPECT_EQ(solution.maxArea(height), 20); // Height is 5, width is 4
+    std::vector nums = { 1, 2, 3, 4, 5 };
+    constexpr std::vector<std::vector<int>> expected = {};
+
+    const std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result, expected);
 }
 
+// Test Case 5: Case with a valid triplet and duplicates
+TEST_F(SolutionTest, TestWithDuplicates)
+{
+    std::vector nums = { -1, 0, 1, -1, 2, 2 };
+    const std::vector<std::vector<int>> expected = {
+        {-1, -1, 2},
+        {-1, 0, 1}
+    };
+
+    std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result.size(), expected.size());
+
+    // Check if each triplet is in the result
+    for (const auto& triplet : expected) {
+        ASSERT_TRUE(std::ranges::find(result.begin(), result.end(), triplet) != result.end());
+    }
+}
+
+// Test Case 6: Edge case with a large array
 TEST_F(SolutionTest, TestLargeInput)
 {
-    const std::vector height(100000, 1); // Large input with all heights equal to 1
-    // The largest area will be between the first and last lines
-    EXPECT_EQ(solution.maxArea(height), 99999); // Height is 1, width is 99999
+    std::vector nums = { -100000, -50000, 0, 50000, 100000 };
+    const std::vector<std::vector<int>> expected = {
+        {-100000, 0, 100000},
+        {-50000, 0, 50000}
+    };
+
+    std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result.size(), expected.size());
+    for (const auto& triplet : expected) {
+        ASSERT_TRUE(std::ranges::find(result.begin(), result.end(), triplet) != result.end());
+    }
 }
 
-TEST_F(SolutionTest, TestMaxHeightAtEnds)
+// Test Case 7: Edge case with fewer than 3 elements
+TEST_F(SolutionTest, TestTooFewElements)
 {
-    const std::vector height = {100, 1, 2, 3, 4, 5, 100};
-    // The largest area is between the first and last lines
-    EXPECT_EQ(solution.maxArea(height), 100 * 6); // Height is 1, width is 6
+    std::vector nums = { 1, 2 };
+    constexpr std::vector<std::vector<int>> expected = {};
+
+    const std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result, expected);
 }
 
-TEST_F(SolutionTest, TestVerySmallInput)
+// Test Case 8: Case with all negative numbers
+TEST_F(SolutionTest, TestAllNegative)
 {
-    const std::vector height = {1, 1};
-    EXPECT_EQ(solution.maxArea(height), 1); // Only two elements
+    std::vector nums = { -5, -4, -3, -2, -1 };
+    constexpr std::vector<std::vector<int>> expected = {};
+
+    const std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result, expected);
 }
 
-TEST_F(SolutionTest, TestSingleLineZeroHeight)
+// Test Case 9: Case with valid triplets and multiple duplicates
+TEST_F(SolutionTest, TestMultipleDuplicates)
 {
-    const std::vector height = {0};
-    EXPECT_EQ(solution.maxArea(height), 0); // No container can be formed
+    std::vector nums = { -1, -1, 0, 0, 1, 1, 2 };
+    const std::vector<std::vector<int>> expected = {
+        {-1, -1, 2},
+        {-1, 0, 1}
+    };
+
+    std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result.size(), expected.size());
+    for (const auto& triplet : expected) {
+        ASSERT_TRUE(std::ranges::find(result.begin(), result.end(), triplet) != result.end());
+    }
 }
 
-TEST_F(SolutionTest, TestAllZeros)
+// Test Case 10: Case with all identical numbers
+TEST_F(SolutionTest, TestIdenticalNumbers)
 {
-    const std::vector height = {0, 0, 0, 0, 0};
-    EXPECT_EQ(solution.maxArea(height), 0); // No water can be held
+    std::vector nums = { 3, 3, 3, 3, 3 };
+    constexpr std::vector<std::vector<int>> expected = {};
+
+    const std::vector<std::vector<int>> result = solution.threeSum(nums);
+
+    ASSERT_EQ(result, expected);
 }
-
-
 
 // Main function to run all the tests
 int main(int argc, char** argv)

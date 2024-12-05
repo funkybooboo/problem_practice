@@ -5,34 +5,46 @@
 #include <sstream>
 
 int main(const int argc, char** argv) {
-    // Check if the correct number of arguments is provided
+    // Check if there are command line arguments
     if (argc < 2) {
-        std::cerr << "Usage: " << argv[0] << " <height1> <height2> ... <heightN>" << std::endl;
+        std::cerr << "Please provide a list of integers as command line arguments." << std::endl;
         return 1;
     }
 
-    // Create a vector to store the heights
-    std::vector<int> height;
+    // Vector to store the parsed integers
+    std::vector<int> nums;
 
-    // Parse the command line arguments into the height vector
+    // Parse the command line arguments into a vector of integers
     for (int i = 1; i < argc; i++) {
         try {
-            height.push_back(std::stoi(argv[i])); // Convert argument to int and add to vector
-        } catch (const std::invalid_argument&) {
+            int num = std::stoi(argv[i]);
+            nums.push_back(num);
+        }
+        catch ([[maybe_unused]] const std::invalid_argument& e) {
             std::cerr << "Invalid input: " << argv[i] << " is not a valid integer." << std::endl;
-            return 1;
-        } catch (const std::out_of_range&) {
-            std::cerr << "Invalid input: " << argv[i] << " is out of range for an integer." << std::endl;
             return 1;
         }
     }
 
-    // Create the Solution object
+    // Create an instance of the Solution class and call the threeSum function
     Solution solution;
 
-    // Call the maxArea function and output the result
-    const int result = solution.maxArea(height);
-    std::cout << "The maximum area of water the container can hold is: " << result << std::endl;
+    // Print the results
+    if (std::vector<std::vector<int>> result = solution.threeSum(nums); result.empty()) {
+        std::cout << "No triplets found that sum to zero." << std::endl;
+    } else {
+        std::cout << "Triplets that sum to zero:" << std::endl;
+        for (const auto& triplet : result) {
+            std::cout << "[";
+            for (size_t i = 0; i < triplet.size(); ++i) {
+                std::cout << triplet[i];
+                if (i != triplet.size() - 1) {
+                    std::cout << ", ";
+                }
+            }
+            std::cout << "]" << std::endl;
+        }
+    }
 
     return 0;
 }

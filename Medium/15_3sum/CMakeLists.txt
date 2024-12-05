@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
 # Config from project to project
-set(PROJECT ContainerWithMostWater)
+set(PROJECT 3Sum)
 set(UNIT_TEST_RUNNER UnitTestRunner)
 
 set(HEADER_FILES
