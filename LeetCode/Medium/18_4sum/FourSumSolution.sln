@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourSum", "FourSum\FourSum.csproj", "{C6C3E777-0F98-4672-BB3F-97BB1063A84D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{227E1354-4866-4AB1-8221-7FCFB17D9563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourSumTests", "FourSumTests\FourSumTests.csproj", "{18135768-FCA8-45D1-996A-0B74FDCBFE74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6C3E777-0F98-4672-BB3F-97BB1063A84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C3E777-0F98-4672-BB3F-97BB1063A84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C3E777-0F98-4672-BB3F-97BB1063A84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C3E777-0F98-4672-BB3F-97BB1063A84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{227E1354-4866-4AB1-8221-7FCFB17D9563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{227E1354-4866-4AB1-8221-7FCFB17D9563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{227E1354-4866-4AB1-8221-7FCFB17D9563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{227E1354-4866-4AB1-8221-7FCFB17D9563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18135768-FCA8-45D1-996A-0B74FDCBFE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18135768-FCA8-45D1-996A-0B74FDCBFE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18135768-FCA8-45D1-996A-0B74FDCBFE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18135768-FCA8-45D1-996A-0B74FDCBFE74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
