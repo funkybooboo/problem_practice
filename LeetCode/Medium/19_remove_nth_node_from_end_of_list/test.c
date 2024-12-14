@@ -1,7 +1,7 @@
 #include "solution.h"
 #include <stdio.h>
 
-// Helper function to check and print test result
+// Helper function to check and print the test result
 void checkTestResult(const int condition, const char* testName) {
     if (condition) {
         printf("%s Passed!\n", testName);
@@ -16,11 +16,12 @@ void testRemoveSecondNodeFromEnd() {
     struct ListNode* head = createList(arr, 5);
     head = removeNthFromEnd(head, 2);
 
-    const int result =
-        (head != NULL && head->val == 1 && head->next != NULL &&
-         head->next->val == 2 && head->next->next != NULL &&
-         head->next->next->val == 3 && head->next->next->next != NULL &&
-         head->next->next->next->val == 5);
+    const int result = (
+        head != NULL && head->val == 1 &&
+        head->next != NULL && head->next->val == 2 &&
+        head->next->next != NULL && head->next->next->val == 3 &&
+        head->next->next->next != NULL && head->next->next->next->val == 5
+    );
 
     checkTestResult(result, "Test Remove Second Node From End");
 }

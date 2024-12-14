@@ -41,6 +41,13 @@ void printList(const struct ListNode* head) {
 
 // Function to remove the Nth node from the end of the list
 struct ListNode* removeNthFromEnd(struct ListNode* head, const int n) {
+    if (head == NULL) {
+        return NULL;
+    }
+    if (n < 1) {
+        return head;
+    }
+    
     const struct ListNode* first = head;
     struct ListNode* second = head;
 
