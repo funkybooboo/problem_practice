@@ -47,35 +47,35 @@ struct ListNode* removeNthFromEnd(struct ListNode* head, const int n) {
     if (n < 1) {
         return head;
     }
-    
-    const struct ListNode* first = head;
-    struct ListNode* second = head;
 
-    // Move the 'first' pointer n steps ahead
+    const struct ListNode* right = head;
+    struct ListNode* left = head;
+
+    // Move the 'right' pointer n steps ahead
     for (int i = 0; i < n; i++) {
-        if (first == NULL) {
+        if (right == NULL) {
             return head; // if n is greater than the number of nodes
         }
-        first = first->next;
+        right = right->next;
     }
 
-    // If first is NULL, it means we need to remove the head node
-    if (first == NULL) {
+    // If right is NULL, it means we need to remove the head node
+    if (right == NULL) {
         struct ListNode* temp = head;
         head = head->next;
         free(temp);
         return head;
     }
 
-    // Move both pointers until 'first' reaches the end
-    while (first->next != NULL) {
-        first = first->next;
-        second = second->next;
+    // Move both pointers until 'right' reaches the end
+    while (right->next != NULL) {
+        right = right->next;
+        left = left->next;
     }
 
     // Remove the Nth node
-    struct ListNode* temp = second->next;
-    second->next = second->next->next;
+    struct ListNode* temp = left->next;
+    left->next = left->next->next;
     free(temp);
 
     return head;
