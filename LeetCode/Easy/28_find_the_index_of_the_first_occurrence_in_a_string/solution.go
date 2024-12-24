@@ -1,7 +1,18 @@
 package main
 
-import "strings"
-
 func strStr(haystack string, needle string) int {
-	return strings.Index(haystack, needle)
+	if len(needle) == 0 {
+		return 0
+	}
+
+	hlen := len(haystack)
+	nlen := len(needle)
+
+	for i := 0; i <= hlen-nlen; i++ {
+		if haystack[i:i+nlen] == needle {
+			return i
+		}
+	}
+
+	return -1
 }
