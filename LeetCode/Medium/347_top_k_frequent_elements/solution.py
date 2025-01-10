@@ -1,12 +1,19 @@
-from typing import List, Dict
+from typing import List
 
 
 class Solution:
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        m: Dict[int, int] = {}
-        for n in nums:
-            m[n] = m.get(n, 0) + 1
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums)
+        r = [1] * n
 
-        s = sorted(m.items(), key=lambda x: x[1], reverse=True)
+        left_product = 1
+        for i in range(n):
+            r[i] = left_product
+            left_product *= nums[i]
 
-        return [i[0] for i in s[:k]]
+        right_product = 1
+        for i in range(n - 1, -1, -1):
+            r[i] *= right_product
+            right_product *= nums[i]
+
+        return r
