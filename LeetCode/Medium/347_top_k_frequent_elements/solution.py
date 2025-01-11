@@ -1,34 +1,13 @@
-from typing import List
+from typing import List, Dict
 
 
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # Create sets for rows, columns, and subgrids
-        rows = [set() for _ in range(9)]
-        cols = [set() for _ in range(9)]
-        subgrids = [set() for _ in range(9)]
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        m: Dict[int, int] = {}
+        for n in nums:
+            m[n] = m.get(n, 0) + 1
 
-        for i in range(9):
-            for j in range(9):
-                num = board[i][j]
+        s = sorted(m.items(), key=lambda x: x[1], reverse=True)
 
-                if num == '.':
-                    continue  # Skip empty cells
+        return [i[0] for i in s[:k]]
 
-                # Check row validity
-                if num in rows[i]:
-                    return False
-                rows[i].add(num)
-
-                # Check column validity
-                if num in cols[j]:
-                    return False
-                cols[j].add(num)
-
-                # Check subgrid validity
-                subgrid_index = (i // 3) * 3 + (j // 3)
-                if num in subgrids[subgrid_index]:
-                    return False
-                subgrids[subgrid_index].add(num)
-
-        return True

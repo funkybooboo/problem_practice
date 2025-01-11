@@ -32,4 +32,3 @@ class Solution:
                 subgrids[subgrid_index].add(num)
 
         return True
-
