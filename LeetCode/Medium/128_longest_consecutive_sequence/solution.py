@@ -1,34 +1,39 @@
 from typing import List
+import heapq
 
 
 class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # Create sets for rows, columns, and subgrids
-        rows = [set() for _ in range(9)]
-        cols = [set() for _ in range(9)]
-        subgrids = [set() for _ in range(9)]
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
 
-        for i in range(9):
-            for j in range(9):
-                num = board[i][j]
+        # Step 1: Remove duplicates by converting to a set
+        nums = set(nums)
 
-                if num == '.':
-                    continue  # Skip empty cells
+        # Step 2: Add all unique elements to the min heap
+        min_heap = []
+        for num in nums:
+            heapq.heappush(min_heap, num)
 
-                # Check row validity
-                if num in rows[i]:
-                    return False
-                rows[i].add(num)
+        # Step 3: Find the longest consecutive sequence
+        longest_streak = 1
+        current_streak = 1
+        prev_num = heapq.heappop(min_heap)  # Pop the smallest element from the heap
 
-                # Check column validity
-                if num in cols[j]:
-                    return False
-                cols[j].add(num)
+        while min_heap:
+            current_num = heapq.heappop(min_heap)  # Pop the next smallest element
 
-                # Check subgrid validity
-                subgrid_index = (i // 3) * 3 + (j // 3)
-                if num in subgrids[subgrid_index]:
-                    return False
-                subgrids[subgrid_index].add(num)
+            # Step 4: Check if the current number is consecutive
+            if current_num == prev_num + 1:
+                current_streak += 1
+            else:
+                # Update longest streak if the current streak is longer
+                longest_streak = max(longest_streak, current_streak)
+                current_streak = 1  # Reset streak to 1
 
-        return True
+            prev_num = current_num
+
+        # Final check to account for the last streak
+        longest_streak = max(longest_streak, current_streak)
+
+        return longest_streak
