@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
-        stack = []
+        stack: List[int] = []
         for t in tokens:
             if t == "+":
                 stack[-2] += stack[-1]
