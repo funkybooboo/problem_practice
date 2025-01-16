@@ -12,7 +12,7 @@ class Solution:
             for j in range(9):
                 num = board[i][j]
 
-                if num == '.':
+                if num == ".":
                     continue  # Skip empty cells
 
                 # Check row validity
@@ -32,4 +32,3 @@ class Solution:
                 subgrids[subgrid_index].add(num)
 
         return True
-

@@ -14,5 +14,5 @@ class TestAddFunction(unittest.TestCase):
         self.assertEqual(result, False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

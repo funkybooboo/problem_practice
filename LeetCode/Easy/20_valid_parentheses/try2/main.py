@@ -8,7 +8,7 @@ def main(args: List[str]):
     if len(args) == 1:
         print("Usage: python main.py <s>")
         return
-    s: str= args[1]
+    s: str = args[1]
     print(Solution().isValid(s))
 
 

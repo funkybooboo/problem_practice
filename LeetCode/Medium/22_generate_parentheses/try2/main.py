@@ -11,6 +11,6 @@ def main(args: List[str]):
     n = int(args[1])
     print(Solution().generateParenthesis(n))
 
+
 if __name__ == "__main__":
     main(sys.argv)
-

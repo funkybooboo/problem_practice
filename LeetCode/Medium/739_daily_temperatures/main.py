@@ -11,6 +11,6 @@ def main(args: List[str]):
     temperatures: List[int] = [int(i) for i in args[1:]]
     print(Solution().dailyTemperatures(temperatures))
 
+
 if __name__ == "__main__":
     main(sys.argv)
-

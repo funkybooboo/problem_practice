@@ -10,7 +10,7 @@ class Solution:
 
         for s in strs:
             # Sort each string and use it as a key for anagram grouping
-            key = ''.join(sorted(s))
+            key = "".join(sorted(s))
             ms[key].append(s)
 
         # Return the grouped anagrams

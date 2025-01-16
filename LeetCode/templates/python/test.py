@@ -22,6 +22,5 @@ class TestAddFunction(unittest.TestCase):
         self.assertEqual(result, 0)  # Test that 0 + 0 equals 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

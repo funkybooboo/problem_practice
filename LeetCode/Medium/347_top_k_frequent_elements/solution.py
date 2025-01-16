@@ -10,4 +10,3 @@ class Solution:
         s = sorted(m.items(), key=lambda x: x[1], reverse=True)
 
         return [i[0] for i in s[:k]]
-
