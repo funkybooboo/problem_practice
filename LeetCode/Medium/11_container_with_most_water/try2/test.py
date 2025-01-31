@@ -6,11 +6,11 @@ from solution import Solution
 class TestAddFunction(unittest.TestCase):
 
     def test_1(self):
-        result = Solution().maxArea([1,8,6,2,5,4,8,3,7])
+        result = Solution().maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])
         self.assertEqual(result, 49)
 
     def test_2(self):
-        result = Solution().maxArea([1,1])
+        result = Solution().maxArea([1, 1])
         self.assertEqual(result, 1)
 
 

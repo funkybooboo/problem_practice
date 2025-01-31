@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def maxTrap(self, heights: List[int]) -> int:
         if not heights or len(heights) < 3:
