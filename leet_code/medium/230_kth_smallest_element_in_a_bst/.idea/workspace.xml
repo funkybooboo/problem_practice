@@ -13,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2xNe3W39ObC4xhcK4nnGVCCgg9H" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +31,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nate/projects/problem_practice/leet_code/medium/230_kth_smallest_element_in_a_bst",
+    "last_opened_file_path": "/home/nate/projects/problem_practice/leet_code/medium/105_construct_binary_tree_from_preorder_and_inorder_traversal",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747782759472</updated>
       <workItem from="1747782760586" duration="842000" />
+      <workItem from="1748209997504" duration="13000" />
     </task>
     <servers />
   </component>
