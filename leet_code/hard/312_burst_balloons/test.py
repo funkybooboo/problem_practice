@@ -7,26 +7,23 @@ class TestMaxCoins(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
 
-    def test_example1(self):
-        self.assertEqual(self.solution.maxCoins([3,1,5,8]), 167)
+    def test_example_1(self):
+        self.assertFalse(self.solution.isMatch("aa", "a"))
 
-    def test_example2(self):
-        self.assertEqual(self.solution.maxCoins([1,5]), 10)
+    def test_example_2(self):
+        self.assertTrue(self.solution.isMatch("aa", "a*"))
 
-    def test_single(self):
-        self.assertEqual(self.solution.maxCoins([5]), 5)
+    def test_example_3(self):
+        self.assertTrue(self.solution.isMatch("ab", ".*"))
 
-    def test_all_zeros(self):
-        self.assertEqual(self.solution.maxCoins([0,0,0]), 0)
+    def test_example_4(self):
+        self.assertFalse(self.solution.isMatch("aa", ".b"))
 
-    def test_increasing(self):
-        self.assertEqual(self.solution.maxCoins([1,2,3,4]), 40)
+    def test_example_5(self):
+        self.assertTrue(self.solution.isMatch("nnn", "n*"))
 
-    def test_decreasing(self):
-        self.assertEqual(self.solution.maxCoins([4,3,2,1]), 40)
-
-    def test_mixed(self):
-        self.assertEqual(self.solution.maxCoins([3,1,2,5]), 56)
+    def test_example_6(self):
+        self.assertTrue(self.solution.isMatch("xyz", ".*z"))
 
 if __name__ == "__main__":
     unittest.main()

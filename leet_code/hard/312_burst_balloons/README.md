@@ -1,29 +1,37 @@
-You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.
+Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
 
-If you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.
+    '.' Matches any single character.​​​​
+    '*' Matches zero or more of the preceding element.
 
-Return the maximum coins you can collect by bursting the balloons wisely.
+The matching should cover the entire input string (not partial).
 
  
 
 Example 1:
 
-Input: nums = [3,1,5,8]
-Output: 167
-Explanation:
-nums = [3,1,5,8] --> [3,5,8] --> [3,8] --> [8] --> []
-coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167
+Input: s = "aa", p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
 
 Example 2:
 
-Input: nums = [1,5]
-Output: 10
+Input: s = "aa", p = "a*"
+Output: true
+Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes "aa".
+
+Example 3:
+
+Input: s = "ab", p = ".*"
+Output: true
+Explanation: ".*" means "zero or more (*) of any character (.)".
 
  
 
 Constraints:
 
-    n == nums.length
-    1 <= n <= 300
-    0 <= nums[i] <= 100
+    1 <= s.length <= 20
+    1 <= p.length <= 20
+    s contains only lowercase English letters.
+    p contains only lowercase English letters, '.', and '*'.
+    It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
 
