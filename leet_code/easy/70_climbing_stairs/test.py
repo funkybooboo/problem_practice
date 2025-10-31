@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestClimbStairs(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -25,6 +26,7 @@ class TestClimbStairs(unittest.TestCase):
 
     def test_n_45(self):
         self.assertEqual(self.solution.climbStairs(45), 1836311903)
+
 
 if __name__ == "__main__":
     unittest.main()

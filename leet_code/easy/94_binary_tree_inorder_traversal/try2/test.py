@@ -2,6 +2,7 @@ import unittest
 from solution import Solution
 from solution import TreeNode
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -15,7 +16,9 @@ class TestSolution(unittest.TestCase):
     def test_example_2(self):
         # Input: root = [1,2,3,4,5,null,8,null,null,6,7,9]
         root = TreeNode(1)
-        root.left = TreeNode(2, left=TreeNode(4, left=TreeNode(6, left=TreeNode(7)), right=TreeNode(5)))
+        root.left = TreeNode(
+            2, left=TreeNode(4, left=TreeNode(6, left=TreeNode(7)), right=TreeNode(5))
+        )
         root.right = TreeNode(3, right=TreeNode(8, left=TreeNode(9)))
         expected_output = [7, 6, 4, 5, 2, 1, 3, 9, 8]
         solution = Solution()
@@ -52,6 +55,7 @@ class TestSolution(unittest.TestCase):
         expected_output = [2, 4, 1, 3, 5]
         solution = Solution()
         self.assertEqual(solution.inorderTraversal(root), expected_output)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestMaxSubArray(unittest.TestCase):
     def test_example_1(self):
         self.assertEqual(Solution().maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]), 6)
@@ -23,5 +24,6 @@ class TestMaxSubArray(unittest.TestCase):
     def test_mixed_numbers(self):
         self.assertEqual(Solution().maxSubArray([-2, 3, -1, 4, -1, 2, 1, -5, 4]), 8)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

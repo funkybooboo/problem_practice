@@ -1,5 +1,6 @@
 from typing import List, Set, Tuple
 
+
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         if not heights or not heights[0]:
@@ -10,13 +11,17 @@ class Solution:
         # Four possible directions: down, up, right, left
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-        def dfs(r: int, c: int, visited: Set[Tuple[int, int]], prev_height: int) -> None:
+        def dfs(
+            r: int, c: int, visited: Set[Tuple[int, int]], prev_height: int
+        ) -> None:
             # Boundary checks and monotonicity check
             if (
-                r < 0 or r >= rows or
-                c < 0 or c >= cols or
-                (r, c) in visited or
-                heights[r][c] < prev_height
+                r < 0
+                or r >= rows
+                or c < 0
+                or c >= cols
+                or (r, c) in visited
+                or heights[r][c] < prev_height
             ):
                 return
 

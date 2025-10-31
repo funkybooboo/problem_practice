@@ -10,6 +10,6 @@ class Solution:
         next_n: int = 0
         for i, bit in enumerate(binary[::-1]):
             if bit == "1":
-                next_n |= (1 << i)
+                next_n |= 1 << i
 
         return next_n

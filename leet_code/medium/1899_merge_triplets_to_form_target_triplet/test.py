@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestMergeTriplets(unittest.TestCase):
     def test_example_1(self):
         triplets = [[2, 5, 3], [1, 8, 4], [1, 7, 5]]
@@ -37,5 +38,6 @@ class TestMergeTriplets(unittest.TestCase):
         target = [1, 1, 1]
         self.assertTrue(Solution().mergeTriplets(triplets, target))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -1,14 +1,20 @@
 from typing import Optional, List
 from collections import deque
 
+
 class TreeNode:
-    def __init__(self, val: int = 0, left: Optional['TreeNode'] = None, right: Optional['TreeNode'] = None):
+    def __init__(
+        self,
+        val: int = 0,
+        left: Optional["TreeNode"] = None,
+        right: Optional["TreeNode"] = None,
+    ):
         self.val = val
         self.left = left
         self.right = right
 
     @staticmethod
-    def from_list(values: List[Optional[int]]) -> Optional['TreeNode']:
+    def from_list(values: List[Optional[int]]) -> Optional["TreeNode"]:
         if not values or values[0] is None:
             return None
 
@@ -30,7 +36,7 @@ class TreeNode:
         return root
 
     @staticmethod
-    def to_list(root: Optional['TreeNode']) -> List[Optional[int]]:
+    def to_list(root: Optional["TreeNode"]) -> List[Optional[int]]:
         if not root:
             return []
 
@@ -58,7 +64,9 @@ class Solution:
         self.helper(root, 0, result)
         return result
 
-    def helper(self, root: Optional[TreeNode], level: int, result: List[List[int]]) -> None:
+    def helper(
+        self, root: Optional[TreeNode], level: int, result: List[List[int]]
+    ) -> None:
         if not root:
             return
         if len(result) <= level:

@@ -7,7 +7,7 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
 
-        locs: Set[Tuple[int, int]] = set() # [(x, y)]
+        locs: Set[Tuple[int, int]] = set()  # [(x, y)]
         for row in range(len(matrix)):
             for col in range(len(matrix[0])):
                 if matrix[row][col] == 0:

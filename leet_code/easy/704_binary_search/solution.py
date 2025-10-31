@@ -5,7 +5,9 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         return self._search_helper(nums, target, 0, len(nums) - 1)
 
-    def _search_helper(self, nums: List[int], target: int, left: int, right: int) -> int:
+    def _search_helper(
+        self, nums: List[int], target: int, left: int, right: int
+    ) -> int:
         if left > right:
             return -1
 

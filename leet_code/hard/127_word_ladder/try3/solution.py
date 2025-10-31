@@ -1,6 +1,7 @@
 from collections import deque
 from typing import List, Set
 
+
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         if not beginWord or not endWord or not wordList or endWord not in wordList:
@@ -24,9 +25,9 @@ class Solution:
     def get_one_away_words(self, word: str, wordSet: Set[str]) -> List[str]:
         neighbors = []
         for i in range(len(word)):
-            for c in 'abcdefghijklmnopqrstuvwxyz':
+            for c in "abcdefghijklmnopqrstuvwxyz":
                 if c != word[i]:
-                    new_word = word[:i] + c + word[i + 1:]
+                    new_word = word[:i] + c + word[i + 1 :]
                     if new_word in wordSet:
                         neighbors.append(new_word)
         return neighbors

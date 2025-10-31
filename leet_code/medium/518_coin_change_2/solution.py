@@ -10,7 +10,7 @@ class Solution:
         cache[0] = [1] * (len(coins) + 1)
 
         for a in range(1, amount + 1):
-            for i in range(len(coins) - 1, -1 , -1):
+            for i in range(len(coins) - 1, -1, -1):
                 cache[a][i] = cache[a][i + 1]
                 if a - coins[i] >= 0:
                     cache[a][i] += cache[a - coins[i]][i]

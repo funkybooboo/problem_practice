@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestLadderLength(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -8,7 +9,7 @@ class TestLadderLength(unittest.TestCase):
     def test_example1(self):
         beginWord = "hit"
         endWord = "cog"
-        wordList = ["hot","dot","dog","lot","log","cog"]
+        wordList = ["hot", "dot", "dog", "lot", "log", "cog"]
         expected = 5
         result = self.solution.ladderLength(beginWord, endWord, wordList)
         self.assertEqual(expected, result)
@@ -16,7 +17,7 @@ class TestLadderLength(unittest.TestCase):
     def test_example2(self):
         beginWord = "hit"
         endWord = "cog"
-        wordList = ["hot","dot","dog","lot","log"]
+        wordList = ["hot", "dot", "dog", "lot", "log"]
         expected = 0
         result = self.solution.ladderLength(beginWord, endWord, wordList)
         self.assertEqual(expected, result)
@@ -36,6 +37,7 @@ class TestLadderLength(unittest.TestCase):
         expected = 4
         result = self.solution.ladderLength(beginWord, endWord, wordList)
         self.assertEqual(expected, result)
+
 
 if __name__ == "__main__":
     unittest.main()

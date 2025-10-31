@@ -12,9 +12,9 @@ class Solution:
                 return cache[(i, j)]
 
             if i == m:
-                return n - j # insert remaining word2
+                return n - j  # insert remaining word2
             if j == n:
-                return m - i # delete remaining word1
+                return m - i  # delete remaining word1
 
             if word1[i] == word2[j]:
                 a = dfs(i + 1, j + 1)

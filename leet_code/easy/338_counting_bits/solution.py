@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def countBits(self, n: int) -> List[int]:
         counts = [0] * (n + 1)
@@ -8,4 +9,3 @@ class Solution:
             counts[i] = counts[i // 2] + (i % 2)
 
         return counts
-

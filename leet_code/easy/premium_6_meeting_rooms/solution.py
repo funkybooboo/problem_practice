@@ -3,6 +3,7 @@ class Interval(object):
         self.start = start
         self.end = end
 
+
 from typing import List
 
 
@@ -10,7 +11,7 @@ class Solution:
     def canAttendMeetings(self, intervals: List[Interval]) -> bool:
         if len(intervals) <= 1:
             return True
-        
+
         intervals.sort(key=lambda x: x.start)
 
         prev_interval = intervals[0]

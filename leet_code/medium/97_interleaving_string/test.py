@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestIsInterleave(unittest.TestCase):
 
     def test_1(self):
@@ -31,6 +32,7 @@ class TestIsInterleave(unittest.TestCase):
     def test_7(self):
         result = Solution().isInterleave("aabc", "abad", "abaadabc")
         self.assertEqual(result, True)
+
 
 if __name__ == "__main__":
     unittest.main()

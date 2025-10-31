@@ -7,13 +7,14 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
 
         return (
-            self.postorderTraversal(root.left) +
-            self.postorderTraversal(root.right) +
-            [root.val]
+            self.postorderTraversal(root.left)
+            + self.postorderTraversal(root.right)
+            + [root.val]
         )

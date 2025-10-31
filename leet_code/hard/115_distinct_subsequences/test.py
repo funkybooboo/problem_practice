@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestNumDistinct(unittest.TestCase):
     def test_example1(self):
         sol = Solution()
@@ -50,6 +51,7 @@ class TestNumDistinct(unittest.TestCase):
         result = sol.numDistinct("a", "aa")
         expected = 0
         self.assertEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

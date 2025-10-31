@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCoinChange(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -34,6 +35,7 @@ class TestCoinChange(unittest.TestCase):
         coins = [7]
         amount = 14
         self.assertEqual(self.solution.coinChange(coins, amount), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

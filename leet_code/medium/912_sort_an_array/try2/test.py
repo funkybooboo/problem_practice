@@ -1,6 +1,7 @@
 import unittest
 from try2.solution import Solution
 
+
 class TestSolution(unittest.TestCase):
     def test_example_1(self):
         solution = Solution()
@@ -26,5 +27,6 @@ class TestSolution(unittest.TestCase):
         expected_output = [1, 2, 3, 5, 10]
         self.assertEqual(solution.sortArray(nums), expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

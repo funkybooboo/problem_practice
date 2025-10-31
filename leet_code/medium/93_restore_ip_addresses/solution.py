@@ -29,10 +29,10 @@ class Solution:
         ip_address: List[str] = []
 
         # Try every possible split into 4 parts (1–3 digits each)
-        for i in range(1, 4): # end of first octet
-            for j in range(i + 1, i + 4): # end of second octet
-                for k in range(j + 1, j + 4): # end of third octet
-                    if k >= len(s): # avoid out-of-range slices
+        for i in range(1, 4):  # end of first octet
+            for j in range(i + 1, i + 4):  # end of second octet
+                for k in range(j + 1, j + 4):  # end of third octet
+                    if k >= len(s):  # avoid out-of-range slices
                         continue
                     o1, o2, o3, o4 = s[:i], s[i:j], s[j:k], s[k:]
                     # Skip if any part is too long

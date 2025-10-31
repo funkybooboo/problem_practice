@@ -1,11 +1,13 @@
 from typing import List
 
+
 class Solution:
     """
     Count the number of islands in a 2D grid of '1's (land) and '0's (water).
     We use a DFS flood-fill approach to 'sink' each discovered island so it's
     not counted more than once.
     """
+
     def numIslands(self, grid: List[List[str]]) -> int:
         """
         Given a 2D grid map of '1's (land) and '0's (water), return the number
@@ -28,10 +30,10 @@ class Solution:
 
         # Four possible directions: down, up, right, left
         directions = [
-            (1, 0),    # down
-            (-1, 0),   # up
-            (0, 1),    # right
-            (0, -1),   # left
+            (1, 0),  # down
+            (-1, 0),  # up
+            (0, 1),  # right
+            (0, -1),  # left
         ]
 
         # Number of islands found
@@ -43,11 +45,11 @@ class Solution:
             Stops when it hits water ('0') or goes out of bounds.
             """
             # Check boundaries and whether this cell is water already
-            if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] != '1':
+            if r < 0 or r >= rows or c < 0 or c >= cols or grid[r][c] != "1":
                 return
 
             # Mark current cell as visited by sinking it to '0'
-            grid[r][c] = '0'
+            grid[r][c] = "0"
 
             # Recursively visit all neighboring cells
             for dr, dc in directions:
@@ -57,8 +59,8 @@ class Solution:
         for r in range(rows):
             for c in range(cols):
                 # If we find land, it's a new island
-                if grid[r][c] == '1':
-                    dfs(r, c)        # Sink the entire island
+                if grid[r][c] == "1":
+                    dfs(r, c)  # Sink the entire island
                     island_count += 1  # Increment our island counter
 
         return island_count

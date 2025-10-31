@@ -15,7 +15,9 @@ class Solution:
         # d     x
         # e     1
 
-        grid: List[List[int]] = [[0 for _ in range(len(text2) + 1)] for _ in range(len(text1) + 1)]
+        grid: List[List[int]] = [
+            [0 for _ in range(len(text2) + 1)] for _ in range(len(text1) + 1)
+        ]
 
         for i in range(len(text1) - 1, -1, -1):
             for j in range(len(text2) - 1, -1, -1):

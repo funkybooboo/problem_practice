@@ -5,7 +5,7 @@ class Solution:
                 left -= 1
                 right += 1
             # Return the expanded palindrome substring
-            return s[left + 1:right]
+            return s[left + 1 : right]
 
         longest = ""
 

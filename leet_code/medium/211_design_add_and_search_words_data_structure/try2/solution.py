@@ -1,5 +1,6 @@
 import string
 
+
 class WordDictionary:
     def __init__(self):
         # store just the full words
@@ -22,11 +23,7 @@ class WordDictionary:
         # or branch on all letters if it’s '.'
         for c in word:
             if c == ".":
-                candidates = [
-                    prefix + l
-                    for prefix in candidates
-                    for l in letters
-                ]
+                candidates = [prefix + l for prefix in candidates for l in letters]
             else:
                 candidates = [prefix + c for prefix in candidates]
 

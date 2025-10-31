@@ -21,12 +21,7 @@ class TestSolution(unittest.TestCase):
 
     def test_example_4(self):
         solution = Solution()
-        grid = [
-            [1, 1, 0, 0],
-            [1, 0, 0, 0],
-            [1, 1, 1, 0],
-            [0, 0, 1, 1]
-        ]
+        grid = [[1, 1, 0, 0], [1, 0, 0, 0], [1, 1, 1, 0], [0, 0, 1, 1]]
         self.assertEqual(solution.islandPerimeter(grid), 18)
 
 

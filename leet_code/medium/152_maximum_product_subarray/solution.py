@@ -1,9 +1,12 @@
 from typing import List, Tuple
 
+
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         n = len(nums)
-        memo: List[Tuple[int, int, int]] = [None] * n  # (max_ending, min_ending, max_so_far)
+        memo: List[Tuple[int, int, int]] = [
+            None
+        ] * n  # (max_ending, min_ending, max_so_far)
 
         def dfs(i: int) -> Tuple[int, int, int]:
             if memo[i] is not None:

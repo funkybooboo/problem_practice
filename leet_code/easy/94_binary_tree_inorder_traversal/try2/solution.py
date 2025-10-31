@@ -14,7 +14,7 @@ class Solution:
             return []
 
         return (
-            self.inorderTraversal(root.left) +
-            [root.val] +
-            self.inorderTraversal(root.right)
+            self.inorderTraversal(root.left)
+            + [root.val]
+            + self.inorderTraversal(root.right)
         )

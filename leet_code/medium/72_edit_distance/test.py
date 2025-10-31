@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestMinDistance(unittest.TestCase):
     def test_example_1(self):
         word1 = "horse"
@@ -55,6 +56,7 @@ class TestMinDistance(unittest.TestCase):
         word2 = "bcda"
         result = Solution().minDistance(word1, word2)
         self.assertEqual(result, 2)
+
 
 if __name__ == "__main__":
     unittest.main()

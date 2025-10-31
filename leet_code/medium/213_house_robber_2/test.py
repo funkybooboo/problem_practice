@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestHouseRobber(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -59,6 +60,7 @@ class TestHouseRobber(unittest.TestCase):
         nums = [1, 2] * 50
         expected = 100  # Can't take both first and last (which are 1s), take max of [0:-1] or [1:]
         self.assertEqual(self.solution.rob(nums), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

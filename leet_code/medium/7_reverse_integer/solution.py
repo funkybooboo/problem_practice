@@ -2,7 +2,7 @@ class Solution:
     def reverse(self, x: int) -> int:
         limit: int = 2147483647
         s = str(x)
-        r = ''
+        r = ""
         n = False
         for c in reversed(s):
             if c == "-":

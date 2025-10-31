@@ -1,5 +1,6 @@
 from typing import List, Set, Tuple
 
+
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         """
@@ -23,10 +24,14 @@ class Solution:
                 return True
 
             # Check for out-of-bounds, character mismatch, or revisiting
-            if (row < 0 or row >= num_rows or
-                col < 0 or col >= num_cols or
-                board[row][col] != word[index] or
-                (row, col) in visited):
+            if (
+                row < 0
+                or row >= num_rows
+                or col < 0
+                or col >= num_cols
+                or board[row][col] != word[index]
+                or (row, col) in visited
+            ):
                 return False
 
             # Mark this cell as visited in the current path
@@ -34,10 +39,10 @@ class Solution:
 
             # Explore all four directions: down, up, right, left
             found = (
-                dfs(row + 1, col, index + 1) or
-                dfs(row - 1, col, index + 1) or
-                dfs(row, col + 1, index + 1) or
-                dfs(row, col - 1, index + 1)
+                dfs(row + 1, col, index + 1)
+                or dfs(row - 1, col, index + 1)
+                or dfs(row, col + 1, index + 1)
+                or dfs(row, col - 1, index + 1)
             )
 
             # Backtrack: remove the cell from the current path

@@ -1,12 +1,13 @@
 from typing import Optional, List
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
     @staticmethod
-    def from_list(items: List[int]) -> Optional['ListNode']:
+    def from_list(items: List[int]) -> Optional["ListNode"]:
         dummy = ListNode()
         current = dummy
         for item in items:
@@ -15,7 +16,7 @@ class ListNode:
         return dummy.next
 
     @staticmethod
-    def to_list(node: Optional['ListNode']) -> List[int]:
+    def to_list(node: Optional["ListNode"]) -> List[int]:
         result = []
         while node:
             result.append(node.val)
@@ -24,7 +25,9 @@ class ListNode:
 
 
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         if not list1:
             return list2
         if not list2:

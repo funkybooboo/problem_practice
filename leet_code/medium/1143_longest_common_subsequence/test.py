@@ -25,5 +25,6 @@ class TestLongestCommonSubsequence(unittest.TestCase):
         result = Solution().longestCommonSubsequence("abcde", "bcde")
         self.assertEqual(result, 4)
 
+
 if __name__ == "__main__":
     unittest.main()

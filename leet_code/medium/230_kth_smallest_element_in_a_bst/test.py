@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestKthSmallest(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -37,6 +38,7 @@ class TestKthSmallest(unittest.TestCase):
         # [1,null,2,null,3]
         root = TreeNode.from_list([1, None, 2, None, 3])
         self.assertEqual(self.solution.kthSmallest(root, 3), 3)
+
 
 if __name__ == "__main__":
     unittest.main()

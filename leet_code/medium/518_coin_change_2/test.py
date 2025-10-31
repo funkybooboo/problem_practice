@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestChangeFunction(unittest.TestCase):
 
     def test_1(self):
@@ -43,6 +44,7 @@ class TestChangeFunction(unittest.TestCase):
     def test_10(self):
         result = Solution().change(2, [1, 2, 3])
         self.assertEqual(result, 2)
+
 
 if __name__ == "__main__":
     unittest.main()

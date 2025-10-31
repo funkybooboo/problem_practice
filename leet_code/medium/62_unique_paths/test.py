@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestUniquePaths(unittest.TestCase):
 
     def test_1(self):
@@ -43,6 +44,7 @@ class TestUniquePaths(unittest.TestCase):
     def test_10(self):
         result = Solution().uniquePaths(20, 20)
         self.assertEqual(result, 35345263800)
+
 
 if __name__ == "__main__":
     unittest.main()

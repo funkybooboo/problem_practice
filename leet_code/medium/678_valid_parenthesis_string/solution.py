@@ -7,13 +7,13 @@ class Solution:
         max_open_left: int = 0
 
         for c in s:
-            if c == '(':
+            if c == "(":
                 min_open_left += 1
                 max_open_left += 1
-            elif c == '*':
+            elif c == "*":
                 min_open_left = max(min_open_left - 1, 0)
                 max_open_left += 1
-            elif c == ')':
+            elif c == ")":
                 min_open_left = max(min_open_left - 1, 0)
                 max_open_left -= 1
             else:

@@ -12,10 +12,10 @@ class Solution:
             return -1
 
         def increment(lock: str, i: int) -> str:
-            return lock[:i] + str((int(lock[i]) + 1) % 10) + lock[i+1:]
+            return lock[:i] + str((int(lock[i]) + 1) % 10) + lock[i + 1 :]
 
         def decrement(lock: str, i: int) -> str:
-            return lock[:i] + str((int(lock[i]) - 1 + 10) % 10) + lock[i+1:]
+            return lock[:i] + str((int(lock[i]) - 1 + 10) % 10) + lock[i + 1 :]
 
         def children(lock: str) -> List[str]:
             children: List[str] = []
@@ -25,7 +25,7 @@ class Solution:
             return children
 
         q: Deque[Tuple[str, int]] = deque()
-        q.append((lock, 0)) # [lock, turns]
+        q.append((lock, 0))  # [lock, turns]
         visited: Set[str] = set(deadends)
         while q:
             lock, turns = q.popleft()

@@ -6,7 +6,7 @@ class Solution:
         A, B = nums1, nums2
 
         if len(B) < len(A):
-            A, B = B, A # ensure A is smaller
+            A, B = B, A  # ensure A is smaller
 
         lenA = len(A)
         lenB = len(B)

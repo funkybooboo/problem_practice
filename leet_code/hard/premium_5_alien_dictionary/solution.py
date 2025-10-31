@@ -1,5 +1,6 @@
 from typing import List, Dict, Set
 
+
 class Solution:
     def foreignDictionary(self, words: List[str]) -> str:
         if len(words) == 0:

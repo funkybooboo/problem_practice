@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -27,6 +28,7 @@ class TestSolution(unittest.TestCase):
     def test_example_6(self):
         solution = Solution()
         self.assertAlmostEqual(solution.myPow(2.00000, -3), 0.12500)
+
 
 if __name__ == "__main__":
     unittest.main()

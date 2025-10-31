@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestInsertInterval(unittest.TestCase):
 
     def test_1(self):
@@ -33,6 +34,7 @@ class TestInsertInterval(unittest.TestCase):
         newInterval = [2, 6]
         expected_output = [[1, 6], [10, 12]]
         self.assertEqual(Solution().insert(intervals, newInterval), expected_output)
+
 
 if __name__ == "__main__":
     unittest.main()

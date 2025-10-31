@@ -1,3 +1,3 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        return round(x ** n, 5)
+        return round(x**n, 5)

@@ -1,12 +1,13 @@
 from typing import List, Optional
 
+
 class ListNode:
-    def __init__(self, val: int = 0, next: Optional['ListNode'] = None):
+    def __init__(self, val: int = 0, next: Optional["ListNode"] = None):
         self.val = val
         self.next = next
 
     @staticmethod
-    def from_list(values: List[int]) -> Optional['ListNode']:
+    def from_list(values: List[int]) -> Optional["ListNode"]:
         if not values:
             return None
 
@@ -17,13 +18,14 @@ class ListNode:
         return head
 
     @staticmethod
-    def to_list(head: Optional['ListNode']) -> List[int]:
+    def to_list(head: Optional["ListNode"]) -> List[int]:
         values = []
         current = head
         while current:
             values.append(current.val)
             current = current.next
         return values
+
 
 class Solution:
     def rec(self, head, n):

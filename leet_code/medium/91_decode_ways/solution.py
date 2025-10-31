@@ -7,7 +7,7 @@ class Solution:
             except (ValueError, TypeError):
                 return False
 
-        if len(s) == 0 or not is_int(s) or s[0] == '0':
+        if len(s) == 0 or not is_int(s) or s[0] == "0":
             return 0
 
         memo = {}
@@ -17,12 +17,12 @@ class Solution:
                 return memo[i]
             if i == len(s):
                 return 1
-            if s[i] == '0':
+            if s[i] == "0":
                 return 0
             # Take one digit
             count = dfs(i + 1)
             # Take two digits
-            if i + 1 < len(s) and 10 <= int(s[i:i + 2]) <= 26:
+            if i + 1 < len(s) and 10 <= int(s[i : i + 2]) <= 26:
                 count += dfs(i + 2)
 
             memo[i] = count

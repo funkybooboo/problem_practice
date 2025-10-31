@@ -1,10 +1,11 @@
 import heapq
 
+
 class MedianFinder:
 
     def __init__(self):
-        self.lowers: list[int] = []   # max-heap (as negative values)
-        self.uppers: list[int] = []   # min-heap
+        self.lowers: list[int] = []  # max-heap (as negative values)
+        self.uppers: list[int] = []  # min-heap
 
     def addNum(self, num: int) -> None:
         if not self.lowers or num <= -self.lowers[0]:

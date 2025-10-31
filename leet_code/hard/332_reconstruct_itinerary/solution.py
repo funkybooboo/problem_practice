@@ -17,7 +17,7 @@ class Solution:
         for src, dst in tickets:
             heappush(graph[src], dst)
 
-        route: List[str] = []   # will hold the itinerary in reverse
+        route: List[str] = []  # will hold the itinerary in reverse
         stack: List[str] = ["JFK"]
 
         # Iterative Hierholzer: walk until you hit a node with no outgoing edges,

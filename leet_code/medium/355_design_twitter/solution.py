@@ -2,11 +2,12 @@ import heapq
 from collections import defaultdict
 from typing import List
 
+
 class Twitter:
     def __init__(self):
         self.timestamp = 0  # Decreasing timestamp for recency
-        self.user_tweets = defaultdict(list)   # userId -> list of [timestamp, tweetId]
-        self.user_follows = defaultdict(set)   # userId -> set of followeeIds
+        self.user_tweets = defaultdict(list)  # userId -> list of [timestamp, tweetId]
+        self.user_follows = defaultdict(set)  # userId -> set of followeeIds
 
     def postTweet(self, userId: int, tweetId: int) -> None:
         # Store tweet with a timestamp (using negative for max-heap behavior)

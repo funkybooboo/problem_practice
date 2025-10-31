@@ -2,12 +2,12 @@ from typing import Optional, List
 
 
 class ListNode:
-    def __init__(self, val: int = 0, next: Optional['ListNode'] = None):
+    def __init__(self, val: int = 0, next: Optional["ListNode"] = None):
         self.val = val
         self.next = next
 
     @staticmethod
-    def from_list(values: List[int]) -> Optional['ListNode']:
+    def from_list(values: List[int]) -> Optional["ListNode"]:
         """Converts a list of integers into a linked list and returns the head."""
         dummy = ListNode()
         current = dummy
@@ -17,7 +17,7 @@ class ListNode:
         return dummy.next
 
     @staticmethod
-    def to_list(node: Optional['ListNode']) -> List[int]:
+    def to_list(node: Optional["ListNode"]) -> List[int]:
         """Converts a linked list back into a list of integers."""
         result = []
         while node:
@@ -43,10 +43,10 @@ class Solution:
 
             # Reverse current k-group
             while count > 0:
-                temp = head.next       # store next node
+                temp = head.next  # store next node
                 head.next = reversed_head  # point current node to the reversed part
-                reversed_head = head   # update the new head of reversed section
-                head = temp            # move to the next node in the original list
+                reversed_head = head  # update the new head of reversed section
+                head = temp  # move to the next node in the original list
                 count -= 1
 
             # After reversal, 'reversed_head' is the new head of this section

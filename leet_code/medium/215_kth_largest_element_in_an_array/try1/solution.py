@@ -1,6 +1,7 @@
 import heapq
 from typing import List
 
+
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         # Step 1: Create a min-heap with the first k elements
@@ -14,6 +15,7 @@ class Solution:
 
         # Step 3: The root of the heap is the kth largest element
         return min_heap[0]
+
 
 # Example usage:
 if __name__ == "__main__":

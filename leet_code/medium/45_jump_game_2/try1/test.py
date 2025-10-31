@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCanJump(unittest.TestCase):
     def test_example_1(self):
         # Example 1: nums = [2,3,1,1,4]
@@ -30,5 +31,6 @@ class TestCanJump(unittest.TestCase):
         # Array with all zeros, only the first element is reachable
         self.assertEqual(Solution().jump([4, 0, 0, 0, 1]), 1)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

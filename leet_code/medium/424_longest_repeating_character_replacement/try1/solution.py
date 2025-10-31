@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def characterReplacement(self, string: str, max_changes: int) -> int:
         # Initialize the result variable to store the maximum length of valid substring
@@ -47,4 +48,3 @@ class Solution:
 
         # Return the result after checking all possible chars
         return max_window_size
-

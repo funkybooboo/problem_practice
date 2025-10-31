@@ -2,6 +2,7 @@ from typing import List, Dict, Tuple
 from collections import defaultdict
 import heapq
 
+
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
         if len(hand) == 0 or groupSize < 1 or len(hand) % groupSize != 0:
@@ -12,7 +13,9 @@ class Solution:
         hand.sort()
 
         # This dict tracks how many groups are waiting for a specific next number
-        looking_for: Dict[int, List[int]] = defaultdict(list)  # number_wanted -> list of group sizes so far
+        looking_for: Dict[int, List[int]] = defaultdict(
+            list
+        )  # number_wanted -> list of group sizes so far
 
         for card in hand:
             if looking_for[card]:

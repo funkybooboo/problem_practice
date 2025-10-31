@@ -2,13 +2,13 @@ from typing import Optional
 
 
 class Node:
-    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
+    def __init__(self, x: int, next: "Node" = None, random: "Node" = None):
         self.val = int(x)
         self.next = next
         self.random = random
 
     @staticmethod
-    def to_list(head: 'Node') -> list[int]:
+    def to_list(head: "Node") -> list[int]:
         """Converts linked list to a Python list (only using .next)."""
         result = []
         current = head
@@ -18,7 +18,7 @@ class Node:
         return result
 
     @staticmethod
-    def from_list(values: list[int]) -> 'Node':
+    def from_list(values: list[int]) -> "Node":
         """Converts a Python list into a linked list (only using .next)."""
         dummy = Node(0)
         current = dummy
@@ -29,7 +29,7 @@ class Node:
 
 
 class Solution:
-    def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+    def copyRandomList(self, head: "Optional[Node]") -> "Optional[Node]":
         if not head:
             return None
 
@@ -42,7 +42,7 @@ class Solution:
         curr = head
         while curr:
             copy = old_to_new[curr]
-            copy.next   = old_to_new[curr.next]
+            copy.next = old_to_new[curr.next]
             copy.random = old_to_new[curr.random]
             curr = curr.next
 

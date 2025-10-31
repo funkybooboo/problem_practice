@@ -1,18 +1,19 @@
 import unittest
 from solution import Twitter
 
+
 class TestTwitter(unittest.TestCase):
 
     def test_example_scenario(self):
         twitter = Twitter()
-        twitter.postTweet(1, 5)                   # User 1 posts tweet 5
+        twitter.postTweet(1, 5)  # User 1 posts tweet 5
         self.assertEqual(twitter.getNewsFeed(1), [5])
 
-        twitter.follow(1, 2)                      # User 1 follows user 2
-        twitter.postTweet(2, 6)                   # User 2 posts tweet 6
+        twitter.follow(1, 2)  # User 1 follows user 2
+        twitter.postTweet(2, 6)  # User 2 posts tweet 6
         self.assertEqual(twitter.getNewsFeed(1), [6, 5])
 
-        twitter.unfollow(1, 2)                    # User 1 unfollows user 2
+        twitter.unfollow(1, 2)  # User 1 unfollows user 2
         self.assertEqual(twitter.getNewsFeed(1), [5])
 
     def test_multiple_tweets_and_follows(self):
@@ -52,6 +53,7 @@ class TestTwitter(unittest.TestCase):
         twitter.postTweet(2, 88)
         twitter.unfollow(1, 2)  # No-op
         self.assertEqual(twitter.getNewsFeed(1), [])
+
 
 if __name__ == "__main__":
     unittest.main()

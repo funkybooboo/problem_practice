@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Node:
     def __init__(self):
         self.children: dict[str, Node] = {}
@@ -13,6 +14,7 @@ class Node:
             current = current.children[char]
         current.is_word = True
 
+
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         root = Node()
@@ -25,12 +27,12 @@ class Solution:
 
         def helper(r: int, c: int, node: Node, word: str):
             if (
-                    r < 0 or
-                    c < 0 or
-                    r == ROWS or
-                    c == COLS or
-                    (r, c) in visited or
-                    board[r][c] not in node.children
+                r < 0
+                or c < 0
+                or r == ROWS
+                or c == COLS
+                or (r, c) in visited
+                or board[r][c] not in node.children
             ):
                 return
 

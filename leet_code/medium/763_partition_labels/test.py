@@ -1,10 +1,13 @@
 import unittest
 from solution import Solution
 
+
 class TestPartitionLabels(unittest.TestCase):
     def test_example_1(self):
         # Example 1: s = "ababcbacadefegdehijhklij"
-        self.assertEqual(Solution().partitionLabels("ababcbacadefegdehijhklij"), [9, 7, 8])
+        self.assertEqual(
+            Solution().partitionLabels("ababcbacadefegdehijhklij"), [9, 7, 8]
+        )
 
     def test_example_2(self):
         # Example 2: s = "eccbbbbdec"
@@ -22,5 +25,6 @@ class TestPartitionLabels(unittest.TestCase):
         # String with no duplicate letters, each letter is a separate partition
         self.assertEqual(Solution().partitionLabels("abcdefg"), [1, 1, 1, 1, 1, 1, 1])
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

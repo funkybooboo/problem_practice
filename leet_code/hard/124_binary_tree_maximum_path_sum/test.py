@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestMaxPathSum(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -23,6 +24,7 @@ class TestMaxPathSum(unittest.TestCase):
     def test_empty_tree(self):
         # if None is allowed, expect 0
         self.assertEqual(self.solution.maxPathSum(None), 0)
+
 
 if __name__ == "__main__":
     unittest.main()

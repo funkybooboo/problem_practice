@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestLastStoneWeight(unittest.TestCase):
 
     def test_example_1(self):
@@ -27,6 +28,7 @@ class TestLastStoneWeight(unittest.TestCase):
         sol = Solution()
         stones = [31] * 30
         self.assertEqual(sol.lastStoneWeight(stones), 31 if 30 % 2 == 1 else 0)
+
 
 if __name__ == "__main__":
     unittest.main()

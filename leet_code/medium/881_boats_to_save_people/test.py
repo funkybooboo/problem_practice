@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
     def test_example_1(self):
         solution = Solution()
@@ -37,5 +38,6 @@ class TestSolution(unittest.TestCase):
         expected_output = 4
         self.assertEqual(solution.numRescueBoats(people, limit), expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

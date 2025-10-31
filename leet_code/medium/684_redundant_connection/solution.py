@@ -1,8 +1,11 @@
 from typing import List
 
+
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-        n = len(edges)  # Number of edges; since the graph was originally a tree, n is also the number of nodes
+        n = len(
+            edges
+        )  # Number of edges; since the graph was originally a tree, n is also the number of nodes
         if n == 0:
             return []
 
@@ -34,4 +37,6 @@ class Solution:
             adj_list[u].append(v)
             adj_list[v].append(u)
 
-        return []  # Fallback - problem guarantees there's one redundant edge, so this won't be reached
+        return (
+            []
+        )  # Fallback - problem guarantees there's one redundant edge, so this won't be reached

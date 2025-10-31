@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         """
@@ -14,14 +15,14 @@ class Solution:
 
         # 4-directional moves: down, up, right, left
         directions = [
-            (1,  0),  # down
+            (1, 0),  # down
             (-1, 0),  # up
-            (0,  1),  # right
+            (0, 1),  # right
             (0, -1),  # left
         ]
 
-        max_area = 0       # largest island seen so far
-        current_area = 0   # area of the island we're currently exploring
+        max_area = 0  # largest island seen so far
+        current_area = 0  # area of the island we're currently exploring
 
         def dfs(r: int, c: int) -> None:
             """

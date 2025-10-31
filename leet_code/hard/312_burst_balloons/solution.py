@@ -11,8 +11,7 @@ class Solution:
 
             match = i < m and (s[i] == p[j] or p[j] == ".")
             if (j + 1) < n and p[j + 1] == "*":
-                cache[(i, j)] = (dfs(i, j + 2) or
-                                (match and dfs(i + 1, j)))
+                cache[(i, j)] = dfs(i, j + 2) or (match and dfs(i + 1, j))
                 return cache[(i, j)]
 
             if match:

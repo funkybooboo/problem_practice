@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestLongestPalindrome(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -44,6 +45,7 @@ class TestLongestPalindrome(unittest.TestCase):
         s = "xyzracecarabc"
         result = self.solution.longestPalindrome(s)
         self.assertEqual(result, "racecar")
+
 
 if __name__ == "__main__":
     unittest.main()

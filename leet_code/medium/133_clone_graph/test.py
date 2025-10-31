@@ -2,6 +2,7 @@ import unittest
 from solution import Solution, Node
 from collections import deque
 
+
 def build_graph(adj_list):
     """
     Build and return the graph Node reference for adj_list.
@@ -16,6 +17,7 @@ def build_graph(adj_list):
     for i, nbrs in enumerate(adj_list, start=1):
         nodes[i].neighbors = [nodes[j] for j in nbrs]
     return nodes[1]
+
 
 def graph_to_adj_list(node):
     """
@@ -46,12 +48,13 @@ def graph_to_adj_list(node):
             result.append([])
     return result
 
+
 class TestCloneGraph(unittest.TestCase):
     def setUp(self):
         self.sol = Solution()
 
     def test_example1(self):
-        adj = [[2,4],[1,3],[2,4],[1,3]]
+        adj = [[2, 4], [1, 3], [2, 4], [1, 3]]
         src = build_graph(adj)
         clone = self.sol.cloneGraph(src)
         out = graph_to_adj_list(clone)
@@ -73,11 +76,12 @@ class TestCloneGraph(unittest.TestCase):
 
     def test_two_node_chain(self):
         # extra test: 1--2
-        adj = [[2],[1]]
+        adj = [[2], [1]]
         src = build_graph(adj)
         clone = self.sol.cloneGraph(src)
         out = graph_to_adj_list(clone)
         self.assertEqual(out, adj)
+
 
 if __name__ == "__main__":
     unittest.main()

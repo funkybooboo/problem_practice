@@ -1,6 +1,7 @@
 from collections import deque
 from typing import List, Set, Tuple
 
+
 class Solution:
     def islandsAndTreasure(self, grid: List[List[int]]) -> None:
         """

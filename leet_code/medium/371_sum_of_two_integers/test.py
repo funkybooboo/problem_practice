@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -19,6 +20,7 @@ class TestSolution(unittest.TestCase):
     def test_example_4(self):
         sol = Solution()
         self.assertEqual(sol.getSum(4, 7), 11)
+
 
 if __name__ == "__main__":
     unittest.main()

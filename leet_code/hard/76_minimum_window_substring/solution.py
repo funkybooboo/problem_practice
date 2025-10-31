@@ -39,12 +39,12 @@ class Solution:
                 left_char: str = s[left]
                 window_chars[left_char] -= 1
                 if (
-                        left_char in required_chars
-                        and window_chars[left_char] < required_chars[left_char]
+                    left_char in required_chars
+                    and window_chars[left_char] < required_chars[left_char]
                 ):
                     current_matches -= 1
 
                 left += 1
 
         start, end = min_window
-        return s[start:end + 1] if min_window[1] != float("inf") else ""
+        return s[start : end + 1] if min_window[1] != float("inf") else ""

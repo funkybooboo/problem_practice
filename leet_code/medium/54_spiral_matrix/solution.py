@@ -49,7 +49,7 @@ class Solution:
                     y -= 1
                 else:
                     x -= 1
-            else: # direction == Direction.Up
+            else:  # direction == Direction.Up
                 if y - 1 < min_up:
                     direction = Direction.Right
                     min_up += 1

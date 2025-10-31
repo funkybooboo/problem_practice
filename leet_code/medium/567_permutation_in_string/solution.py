@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         s1 = sorted(s1)
@@ -11,4 +12,3 @@ class Solution:
                 if sub_str == s1:
                     return True
         return False
-

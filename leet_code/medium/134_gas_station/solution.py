@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         if len(gas) == 0 or len(gas) != len(cost):

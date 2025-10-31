@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:
         # A tree must have exactly n - 1 edges
@@ -15,9 +16,9 @@ class Solution:
             adj_list[u].append(v)
             adj_list[v].append(u)
 
-        completed: set[int] = set()   # nodes fully processed (no cycles downstream)
-        visiting: set[int] = set()    # nodes in the current DFS recursion stack
-        cycle: bool = False           # global flag—set True if we detect a cycle
+        completed: set[int] = set()  # nodes fully processed (no cycles downstream)
+        visiting: set[int] = set()  # nodes in the current DFS recursion stack
+        cycle: bool = False  # global flag—set True if we detect a cycle
 
         def dfs_visit(u: int, parent: int) -> bool:
             nonlocal cycle

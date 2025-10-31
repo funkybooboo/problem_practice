@@ -1,14 +1,20 @@
 from typing import Optional, List
 from collections import deque
 
+
 class TreeNode:
-    def __init__(self, val: int = 0, left: Optional['TreeNode'] = None, right: Optional['TreeNode'] = None):
+    def __init__(
+        self,
+        val: int = 0,
+        left: Optional["TreeNode"] = None,
+        right: Optional["TreeNode"] = None,
+    ):
         self.val = val
         self.left = left
         self.right = right
 
     @staticmethod
-    def from_list(values: List[Optional[int]]) -> Optional['TreeNode']:
+    def from_list(values: List[Optional[int]]) -> Optional["TreeNode"]:
         if not values or values[0] is None:
             return None
 
@@ -30,7 +36,7 @@ class TreeNode:
         return root
 
     @staticmethod
-    def to_list(root: Optional['TreeNode']) -> List[Optional[int]]:
+    def to_list(root: Optional["TreeNode"]) -> List[Optional[int]]:
         if not root:
             return []
 
@@ -53,17 +59,16 @@ class TreeNode:
 
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode',
-         p: 'TreeNode|int',
-         q: 'TreeNode|int'
-     ) -> 'TreeNode':
+    def lowestCommonAncestor(
+        self, root: "TreeNode", p: "TreeNode|int", q: "TreeNode|int"
+    ) -> "TreeNode":
         path_p = self._get_path_to(root, p)
         path_q = self._get_path_to(root, q)
 
         return self._get_lca(path_p, path_q)
 
     @staticmethod
-    def _get_lca(a: list['TreeNode'], b: list['TreeNode']) -> 'TreeNode':
+    def _get_lca(a: list["TreeNode"], b: list["TreeNode"]) -> "TreeNode":
         seen = set(b)
         for x in a:
             if x in seen:
@@ -71,12 +76,14 @@ class Solution:
         # LeetCode guarantees p and q are in the tree, so we never really hit this.
         return None
 
-    def _get_path_to(self, root: 'TreeNode', target: 'TreeNode|int') -> list['TreeNode']:
+    def _get_path_to(
+        self, root: "TreeNode", target: "TreeNode|int"
+    ) -> list["TreeNode"]:
         if not root:
             return []
 
         # normalize to a value to compare against .val
-        tgt_val = getattr(target, 'val', target)
+        tgt_val = getattr(target, "val", target)
 
         if root.val == tgt_val:
             return [root]

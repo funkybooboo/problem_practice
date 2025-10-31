@@ -1,8 +1,9 @@
 from typing import List, Tuple, Set
 import heapq
 
-Loc = Tuple[int ,int]
+Loc = Tuple[int, int]
 Direction = Loc
+
 
 class Solution:
     def minimumEffortPath(self, heights: List[List[int]]) -> int:
@@ -22,7 +23,10 @@ class Solution:
             return abs(heights[loc1[0]][loc1[1]] - heights[loc2[0]][loc2[1]])
 
         def within_bounds(loc: Loc, direction: Direction) -> bool:
-            if 0 <= loc[0] + direction[0] < rows and 0 <= loc[1] + direction[1] < columns:
+            if (
+                0 <= loc[0] + direction[0] < rows
+                and 0 <= loc[1] + direction[1] < columns
+            ):
                 return True
             return False
 

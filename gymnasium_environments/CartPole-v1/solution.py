@@ -10,10 +10,12 @@ env = gym.make("CartPole-v1", render_mode="human")
 def discretize_state(state):
     """Discretize the continuous state space into a smaller grid."""
     # Define state bins
-    bins = [np.linspace(-2.4, 2.4, 6),  # cart position
-            np.linspace(-3.0, 3.0, 6),  # cart velocity
-            np.linspace(-0.5, 0.5, 6),  # pole angle
-            np.linspace(-2.0, 2.0, 6)]  # pole velocity
+    bins = [
+        np.linspace(-2.4, 2.4, 6),  # cart position
+        np.linspace(-3.0, 3.0, 6),  # cart velocity
+        np.linspace(-0.5, 0.5, 6),  # pole angle
+        np.linspace(-2.0, 2.0, 6),
+    ]  # pole velocity
 
     # Convert the state to indices of the bins
     return tuple(np.digitize(s, bin_edges) - 1 for s, bin_edges in zip(state, bins))
@@ -49,7 +51,9 @@ for episode in range(episodes):
 
         # Q-learning update rule
         max_future_q = np.max(q_table[next_state])
-        q_table[state][action] += alpha * (reward + gamma * max_future_q - q_table[state][action])
+        q_table[state][action] += alpha * (
+            reward + gamma * max_future_q - q_table[state][action]
+        )
 
         # Move to the next state
         state = next_state

@@ -45,7 +45,7 @@ class TestSolution(unittest.TestCase):
             while current:
                 result.append(current.val)
                 current = current.next
-            result.append('#')
+            result.append("#")
             # Move to next level
             leftmost = leftmost.left
 
@@ -60,7 +60,7 @@ class TestSolution(unittest.TestCase):
         root = self.build_tree([1, 2, 3, 4, 5, 6, 7])
         result = solution.connect(root)
         serialized = self.serialize_with_next(result)
-        expected = [1, '#', 2, 3, '#', 4, 5, 6, 7, '#']
+        expected = [1, "#", 2, 3, "#", 4, 5, 6, 7, "#"]
         self.assertEqual(serialized, expected)
 
     def test_example2(self):
@@ -84,9 +84,9 @@ class TestSolution(unittest.TestCase):
         root = self.build_tree([1])
         result = solution.connect(root)
         serialized = self.serialize_with_next(result)
-        expected = [1, '#']
+        expected = [1, "#"]
         self.assertEqual(serialized, expected)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

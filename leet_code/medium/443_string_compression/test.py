@@ -46,5 +46,5 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(chars[:3], ["1", "2", "2"])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

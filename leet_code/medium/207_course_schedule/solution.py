@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         """
@@ -14,9 +15,9 @@ class Solution:
         for course_id, prereq_id in prerequisites:
             prereq_graph[course_id].append(prereq_id)
 
-        completed: set[int] = set()   # courses fully processed (no cycles downstream)
-        visiting: set[int] = set()    # courses in the current DFS recursion stack
-        can_finish: bool = True       # global flag—set False if we detect a cycle
+        completed: set[int] = set()  # courses fully processed (no cycles downstream)
+        visiting: set[int] = set()  # courses in the current DFS recursion stack
+        can_finish: bool = True  # global flag—set False if we detect a cycle
 
         def dfs_visit(course_id: int) -> None:
             nonlocal can_finish

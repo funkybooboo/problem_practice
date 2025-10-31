@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSubsets(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -16,16 +17,12 @@ class TestSubsets(unittest.TestCase):
         self.assertCountEqual(
             normalized_result,
             normalized_expected,
-            msg=f"\nResult:   {result}\nExpected: {expected}"
+            msg=f"\nResult:   {result}\nExpected: {expected}",
         )
 
     def test_example1(self):
         nums = [1, 2, 3]
-        expected = [
-            [], [1], [2], [3],
-            [1, 2], [1, 3], [2, 3],
-            [1, 2, 3]
-        ]
+        expected = [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]]
         result = self.solution.subsets(nums)
         self.assertSubsetsEqual(result, expected)
 
@@ -46,6 +43,7 @@ class TestSubsets(unittest.TestCase):
         expected = [[], [-1], [0], [-1, 0]]
         result = self.solution.subsets(nums)
         self.assertSubsetsEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

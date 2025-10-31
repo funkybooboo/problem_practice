@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestMaxProductSubarray(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -44,6 +45,7 @@ class TestMaxProductSubarray(unittest.TestCase):
         nums = [0, 2, -1, 4, -3, 2]
         expected = 48  # Subarray [2, -1, 4, -3, 2]
         self.assertEqual(self.solution.maxProduct(nums), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

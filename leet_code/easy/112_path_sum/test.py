@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestInvertTree(unittest.TestCase):
 
     def test_example_1(self):
@@ -26,7 +27,11 @@ class TestInvertTree(unittest.TestCase):
         self.assertTrue(solution.hasPathSum(root, 3))
 
     def test_example_5(self):
-        root = TreeNode(-15, TreeNode(10), TreeNode(20, TreeNode(15), TreeNode(5, None, TreeNode(-5))))
+        root = TreeNode(
+            -15,
+            TreeNode(10),
+            TreeNode(20, TreeNode(15), TreeNode(5, None, TreeNode(-5))),
+        )
         solution = Solution()
         self.assertFalse(solution.hasPathSum(root, 15))
 
@@ -34,6 +39,7 @@ class TestInvertTree(unittest.TestCase):
         root = TreeNode(1, TreeNode(1), TreeNode(0, TreeNode(1)))
         solution = Solution()
         self.assertTrue(solution.hasPathSum(root, 2))
+
 
 if __name__ == "__main__":
     unittest.main()

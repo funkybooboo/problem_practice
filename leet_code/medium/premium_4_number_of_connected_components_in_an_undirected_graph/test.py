@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCountComponents(unittest.TestCase):
     def test_single_component(self):
         # One connected component
@@ -8,7 +9,9 @@ class TestCountComponents(unittest.TestCase):
 
     def test_two_components(self):
         # Two separate components: 0-1-2 and 4-5, 3 is isolated
-        self.assertEqual(Solution().countComponents(6, [[0, 1], [1, 2], [2, 3], [4, 5]]), 2)
+        self.assertEqual(
+            Solution().countComponents(6, [[0, 1], [1, 2], [2, 3], [4, 5]]), 2
+        )
 
     def test_disconnected_nodes(self):
         # No edges: each node is its own component
@@ -26,5 +29,6 @@ class TestCountComponents(unittest.TestCase):
         # Only one node
         self.assertEqual(Solution().countComponents(1, []), 1)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

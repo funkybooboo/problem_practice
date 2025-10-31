@@ -1,5 +1,6 @@
 from typing import List, Dict
 
+
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
         n = len(s)

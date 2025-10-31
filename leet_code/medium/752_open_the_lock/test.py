@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
     def test_example_1(self):
         deadends = ["0201", "0101", "0102", "1212", "2002"]
@@ -37,5 +38,6 @@ class TestSolution(unittest.TestCase):
         solution = Solution()
         self.assertEqual(solution.openLock(deadends, target), expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

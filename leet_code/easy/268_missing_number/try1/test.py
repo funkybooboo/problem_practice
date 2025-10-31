@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -27,6 +28,7 @@ class TestSolution(unittest.TestCase):
         nums = [0, 2]
         expected_output = 1
         self.assertEqual(Solution().missingNumber(nums), expected_output)
+
 
 if __name__ == "__main__":
     unittest.main()

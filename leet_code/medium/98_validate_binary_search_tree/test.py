@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestIsValidBST(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -49,6 +50,7 @@ class TestIsValidBST(unittest.TestCase):
         #    9    <- 9 is in left subtree of 8 but > 8
         root = TreeNode.from_list([8, 3, 10, None, 9])
         self.assertFalse(self.solution.isValidBST(root))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 from typing import Optional, List
 from collections import deque
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -8,7 +9,7 @@ class TreeNode:
         self.right = right
 
     @staticmethod
-    def from_list(values: List[Optional[int]]) -> Optional['TreeNode']:
+    def from_list(values: List[Optional[int]]) -> Optional["TreeNode"]:
         if not values:
             return None
 
@@ -31,7 +32,7 @@ class TreeNode:
         return root
 
     @staticmethod
-    def to_list(root: Optional['TreeNode']) -> List[Optional[int]]:
+    def to_list(root: Optional["TreeNode"]) -> List[Optional[int]]:
         if not root:
             return []
 
@@ -52,6 +53,7 @@ class TreeNode:
             result.pop()
 
         return result
+
 
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:

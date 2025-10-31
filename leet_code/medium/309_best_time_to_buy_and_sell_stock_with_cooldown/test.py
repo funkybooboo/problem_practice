@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestAddFunction(unittest.TestCase):
 
     def test_1(self):
@@ -23,6 +24,7 @@ class TestAddFunction(unittest.TestCase):
     def test_5(self):
         result = Solution().maxProfit([3, 3, 5, 0, 0, 3, 1, 4])
         self.assertEqual(result, 6)
+
 
 if __name__ == "__main__":
     unittest.main()

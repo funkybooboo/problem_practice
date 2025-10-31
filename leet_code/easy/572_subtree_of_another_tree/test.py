@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestIsSubtree(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -37,6 +38,7 @@ class TestIsSubtree(unittest.TestCase):
         root = TreeNode.from_list([3, 4, 5, 1, 2, None, None, None, None, 0])
         subRoot = TreeNode.from_list([4, 1, 2])
         self.assertFalse(self.solution.isSubtree(root, subRoot))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,9 +1,10 @@
 from typing import List
 
+
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         word_set = set(wordDict)  # Faster lookup
-        memo = {len(s): True}     # Base case: end of string is always valid
+        memo = {len(s): True}  # Base case: end of string is always valid
 
         def can_break(start: int) -> bool:
             if start in memo:

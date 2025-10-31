@@ -9,7 +9,7 @@ class Solution:
         visited: Set[str] = set()
         wordSet = set(wordList)
 
-        smallest = float('inf')
+        smallest = float("inf")
 
         def dfs(current_word: str, count: int) -> None:
             nonlocal smallest
@@ -27,7 +27,7 @@ class Solution:
             visited.remove(current_word)
 
         dfs(beginWord, 1)
-        return int(smallest) if smallest != float('inf') else 0
+        return int(smallest) if smallest != float("inf") else 0
 
     def get_one_away_words(self, word: str, words: Set[str]) -> List[str]:
         result = []

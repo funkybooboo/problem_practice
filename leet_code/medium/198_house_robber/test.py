@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestHouseRobber(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -54,6 +55,7 @@ class TestHouseRobber(unittest.TestCase):
         nums = [1, 2] * 50  # Alternating pattern
         expected = 100  # Rob every other house with value 2
         self.assertEqual(self.solution.rob(nums), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

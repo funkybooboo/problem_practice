@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestIsBalanced(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -24,6 +25,7 @@ class TestIsBalanced(unittest.TestCase):
     def test_skewed_tree(self):
         root = TreeNode.from_list([1, 2, None, 3, None, 4])
         self.assertFalse(self.solution.isBalanced(root))
+
 
 if __name__ == "__main__":
     unittest.main()

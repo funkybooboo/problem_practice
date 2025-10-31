@@ -25,5 +25,6 @@ class TestMaxCoins(unittest.TestCase):
     def test_example_6(self):
         self.assertTrue(self.solution.isMatch("xyz", ".*z"))
 
+
 if __name__ == "__main__":
     unittest.main()

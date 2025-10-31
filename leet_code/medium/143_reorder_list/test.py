@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, ListNode
 
+
 class TestReorderList(unittest.TestCase):
 
     def test_1(self):
@@ -27,6 +28,7 @@ class TestReorderList(unittest.TestCase):
         head = ListNode.from_list([1])
         Solution().reorderList(head)
         self.assertEqual(ListNode.to_list(head), [1])
+
 
 if __name__ == "__main__":
     unittest.main()

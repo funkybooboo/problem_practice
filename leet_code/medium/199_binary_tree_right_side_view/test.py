@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestRightSideView(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -39,6 +40,7 @@ class TestRightSideView(unittest.TestCase):
         root = TreeNode.from_list([1, None, 2, None, 3])
         expected = [1, 2, 3]
         self.assertEqual(self.solution.rightSideView(root), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

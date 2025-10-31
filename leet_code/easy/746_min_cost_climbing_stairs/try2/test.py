@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestMinCostClimbingStairs(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -34,6 +35,7 @@ class TestMinCostClimbingStairs(unittest.TestCase):
         cost = [1] * 1000
         expected = 500  # Best path is to always jump 2 steps
         self.assertEqual(self.solution.minCostClimbingStairs(cost), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

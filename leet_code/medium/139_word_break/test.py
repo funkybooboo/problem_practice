@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestWordBreak(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -44,6 +45,7 @@ class TestWordBreak(unittest.TestCase):
         s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"
         wordDict = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa"]
         self.assertFalse(self.solution.wordBreak(s, wordDict))
+
 
 if __name__ == "__main__":
     unittest.main()

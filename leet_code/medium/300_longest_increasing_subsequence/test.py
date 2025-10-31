@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestLengthOfLIS(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -44,6 +45,7 @@ class TestLengthOfLIS(unittest.TestCase):
         nums = []
         expected = 0
         self.assertEqual(self.solution.lengthOfLIS(nums), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

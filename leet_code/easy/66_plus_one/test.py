@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -22,6 +23,7 @@ class TestSolution(unittest.TestCase):
     def test_example_5(self):
         solution = Solution()
         self.assertEqual(solution.plusOne([9, 9, 9]), [1, 0, 0, 0])
+
 
 if __name__ == "__main__":
     unittest.main()

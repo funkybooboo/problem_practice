@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestForeignDictionary(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -15,7 +16,11 @@ class TestForeignDictionary(unittest.TestCase):
         words = ["hrn", "hrf", "er", "enn", "rfnn"]
         expected = "hernf"
         result = self.solution.foreignDictionary(words)
-        self.assertIn(result, ["hernf", "hefnr", "herfn", "hfrne"], msg=f"Expected one of ['hernf', 'hefnr', 'herfn', 'hfrne'] but got {result}")
+        self.assertIn(
+            result,
+            ["hernf", "hefnr", "herfn", "hfrne"],
+            msg=f"Expected one of ['hernf', 'hefnr', 'herfn', 'hfrne'] but got {result}",
+        )
 
     def test_invalid_order(self):
         words = ["abc", "ab"]
@@ -33,7 +38,12 @@ class TestForeignDictionary(unittest.TestCase):
         words = ["wrt", "wrf", "er", "ett", "rftt"]
         expected = "wertf"
         result = self.solution.foreignDictionary(words)
-        self.assertIn(result, ["wertf", "wfret", "wfetr"], msg=f"Expected one of ['wertf', 'wfret', 'wfetr'] but got {result}")
+        self.assertIn(
+            result,
+            ["wertf", "wfret", "wfetr"],
+            msg=f"Expected one of ['wertf', 'wfret', 'wfetr'] but got {result}",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

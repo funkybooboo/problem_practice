@@ -1,5 +1,6 @@
 from typing import Optional
 
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -50,6 +51,7 @@ class ListNode:
             current.next = nodes[pos]
 
         return head
+
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:

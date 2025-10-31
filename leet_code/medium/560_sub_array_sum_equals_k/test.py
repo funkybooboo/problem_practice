@@ -32,5 +32,6 @@ class TestSolution(unittest.TestCase):
         expected_output = 6
         self.assertEqual(solution.subarraySum(nums, k), expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         if not stones:
@@ -7,8 +8,8 @@ class Solution:
 
         while len(stones) > 1:
             stones.sort()
-            x = stones.pop()   # heaviest
-            y = stones.pop()   # second heaviest
+            x = stones.pop()  # heaviest
+            y = stones.pop()  # second heaviest
 
             if x != y:
                 stones.append(x - y)

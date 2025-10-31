@@ -2,20 +2,21 @@ import unittest
 
 from solution import Solution
 
+
 class TestEraseOverlapIntervals(unittest.TestCase):
 
     def test_example_1(self):
-        intervals = [[1,2],[2,3],[3,4],[1,3]]
+        intervals = [[1, 2], [2, 3], [3, 4], [1, 3]]
         result = Solution().eraseOverlapIntervals(intervals)
         self.assertEqual(result, 1)
 
     def test_example_2(self):
-        intervals = [[1,2],[1,2],[1,2]]
+        intervals = [[1, 2], [1, 2], [1, 2]]
         result = Solution().eraseOverlapIntervals(intervals)
         self.assertEqual(result, 2)
 
     def test_example_3(self):
-        intervals = [[1,2],[2,3]]
+        intervals = [[1, 2], [2, 3]]
         result = Solution().eraseOverlapIntervals(intervals)
         self.assertEqual(result, 0)
 
@@ -48,6 +49,7 @@ class TestEraseOverlapIntervals(unittest.TestCase):
         intervals = [[2, 3], [1, 3], [1, 4]]
         result = Solution().eraseOverlapIntervals(intervals)
         self.assertEqual(result, 2)
+
 
 if __name__ == "__main__":
     unittest.main()

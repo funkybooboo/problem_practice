@@ -5,7 +5,7 @@ class LRUCache:
     def __init__(self, capacity: int):
         self._capacity: int = capacity
         self._key_to_value: Dict[int, int] = {}
-        self._usage_order: List[int] = [] # Tracks order of key usage (oldest at front)
+        self._usage_order: List[int] = []  # Tracks order of key usage (oldest at front)
 
     def _mark_recent(self, key: int) -> None:
         if key in self._usage_order:
@@ -25,7 +25,7 @@ class LRUCache:
             return
 
         if len(self._key_to_value) == self._capacity:
-            lru_key = self._usage_order.pop(0) # Remove least recently used
+            lru_key = self._usage_order.pop(0)  # Remove least recently used
             del self._key_to_value[lru_key]
 
         self._key_to_value[key] = value

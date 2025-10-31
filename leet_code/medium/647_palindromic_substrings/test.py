@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCountPalindromicSubstrings(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -27,6 +28,7 @@ class TestCountPalindromicSubstrings(unittest.TestCase):
     def test_palindrome_in_middle(self):
         self.assertEqual(self.solution.countSubstrings("abccba"), 9)
         # "a", "b", "c", "c", "b", "a", "cc", "bccb", "abccba"
+
 
 if __name__ == "__main__":
     unittest.main()

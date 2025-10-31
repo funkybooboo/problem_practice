@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestLetterCombinations(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -10,18 +11,12 @@ class TestLetterCombinations(unittest.TestCase):
         Compare two lists of strings regardless of order.
         """
         self.assertCountEqual(
-            result,
-            expected,
-            msg=f"\nResult:   {result}\nExpected: {expected}"
+            result, expected, msg=f"\nResult:   {result}\nExpected: {expected}"
         )
 
     def test_example1(self):
         digits = "23"
-        expected = [
-            "ad", "ae", "af",
-            "bd", "be", "bf",
-            "cd", "ce", "cf"
-        ]
+        expected = ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
         result = self.solution.letterCombinations(digits)
         self.assertCombinationsEqual(result, expected)
 
@@ -41,13 +36,26 @@ class TestLetterCombinations(unittest.TestCase):
         digits = "79"
         # 7 maps to pqrs, 9 maps to wxyz → 4 * 4 = 16 combinations
         expected = [
-            "pw", "px", "py", "pz",
-            "qw", "qx", "qy", "qz",
-            "rw", "rx", "ry", "rz",
-            "sw", "sx", "sy", "sz"
+            "pw",
+            "px",
+            "py",
+            "pz",
+            "qw",
+            "qx",
+            "qy",
+            "qz",
+            "rw",
+            "rx",
+            "ry",
+            "rz",
+            "sw",
+            "sx",
+            "sy",
+            "sz",
         ]
         result = self.solution.letterCombinations(digits)
         self.assertCombinationsEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

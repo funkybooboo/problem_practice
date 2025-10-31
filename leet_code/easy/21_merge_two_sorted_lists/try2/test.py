@@ -1,6 +1,7 @@
 import unittest
 from solution import ListNode, Solution
 
+
 class TestMergeTwoLists(unittest.TestCase):
 
     def test_1(self):
@@ -32,6 +33,7 @@ class TestMergeTwoLists(unittest.TestCase):
         list2 = ListNode.from_list([1, 2])
         result = Solution.mergeTwoLists(list1, list2)
         self.assertEqual(ListNode.to_list(result), [1, 2])
+
 
 if __name__ == "__main__":
     unittest.main()

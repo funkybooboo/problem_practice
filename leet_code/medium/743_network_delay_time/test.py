@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestNetworkDelayTime(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -53,6 +54,7 @@ class TestNetworkDelayTime(unittest.TestCase):
         k = 1
         expected = 2  # 1→2→3
         self.assertEqual(self.solution.networkDelayTime(times, n, k), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

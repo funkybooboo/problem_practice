@@ -8,7 +8,7 @@ class TestMergeKLists(unittest.TestCase):
         lists = [
             ListNode.from_list([1, 4, 5]),
             ListNode.from_list([1, 3, 4]),
-            ListNode.from_list([2, 6])
+            ListNode.from_list([2, 6]),
         ]
         merged = Solution().mergeKLists(lists)
         self.assertEqual(ListNode.to_list(merged), [1, 1, 2, 3, 4, 4, 5, 6])
@@ -38,7 +38,7 @@ class TestMergeKLists(unittest.TestCase):
         lists = [
             ListNode.from_list([5]),
             ListNode.from_list([1]),
-            ListNode.from_list([3])
+            ListNode.from_list([3]),
         ]
         merged = Solution().mergeKLists(lists)
         self.assertEqual(ListNode.to_list(merged), [1, 3, 5])
@@ -49,7 +49,7 @@ class TestMergeKLists(unittest.TestCase):
             ListNode.from_list([]),
             ListNode.from_list([2]),
             ListNode.from_list([]),
-            ListNode.from_list([1])
+            ListNode.from_list([1]),
         ]
         merged = Solution().mergeKLists(lists)
         self.assertEqual(ListNode.to_list(merged), [1, 2])
@@ -59,7 +59,7 @@ class TestMergeKLists(unittest.TestCase):
         lists = [
             ListNode.from_list([1, 3, 5]),
             ListNode.from_list([1, 3, 5]),
-            ListNode.from_list([1, 3, 5])
+            ListNode.from_list([1, 3, 5]),
         ]
         merged = Solution().mergeKLists(lists)
         self.assertEqual(ListNode.to_list(merged), [1, 1, 1, 3, 3, 3, 5, 5, 5])
@@ -69,7 +69,7 @@ class TestMergeKLists(unittest.TestCase):
         lists = [
             ListNode.from_list([-10, -5, 0]),
             ListNode.from_list([-6, 2, 4]),
-            ListNode.from_list([-1, 1, 3])
+            ListNode.from_list([-1, 1, 3]),
         ]
         merged = Solution().mergeKLists(lists)
         self.assertEqual(ListNode.to_list(merged), [-10, -6, -5, -1, 0, 1, 2, 3, 4])
@@ -79,6 +79,7 @@ class TestMergeKLists(unittest.TestCase):
         lists = [ListNode.from_list([i]) for i in range(20, 0, -1)]  # 20 down to 1
         merged = Solution().mergeKLists(lists)
         self.assertEqual(ListNode.to_list(merged), list(range(1, 21)))
+
 
 if __name__ == "__main__":
     unittest.main()

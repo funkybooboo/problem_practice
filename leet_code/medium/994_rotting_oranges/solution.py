@@ -28,9 +28,11 @@ class Solution:
                 for dr, dc in directions:
                     row, col = r + dr, c + dc
                     # Check if the new position is in bounds and contains a fresh orange
-                    if (0 <= row < len(grid) and
-                            0 <= col < len(grid[0]) and
-                            grid[row][col] == 1):
+                    if (
+                        0 <= row < len(grid)
+                        and 0 <= col < len(grid[0])
+                        and grid[row][col] == 1
+                    ):
                         # Rot the fresh orange
                         grid[row][col] = 2
                         q.append((row, col))

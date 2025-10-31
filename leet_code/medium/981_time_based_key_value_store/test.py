@@ -36,5 +36,6 @@ class TestTimeMap(unittest.TestCase):
         self.assertEqual(timeMap.get("a", 3), "apricot")
         self.assertEqual(timeMap.get("b", 2), "banana")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
     def test_example_1(self):
         nums = [5, 7, 7, 8, 8, 10]
@@ -79,5 +80,6 @@ class TestSolution(unittest.TestCase):
         solution = Solution()
         self.assertEqual(solution.searchRange(nums, target), expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

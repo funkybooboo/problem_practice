@@ -1,6 +1,7 @@
 import unittest
 from solution import Codec, TreeNode
 
+
 class TestCodec(unittest.TestCase):
     def setUp(self):
         self.codec = Codec()
@@ -13,8 +14,7 @@ class TestCodec(unittest.TestCase):
             return False
         if p.val != q.val:
             return False
-        return (self.is_same_tree(p.left, q.left)
-                and self.is_same_tree(p.right, q.right))
+        return self.is_same_tree(p.left, q.left) and self.is_same_tree(p.right, q.right)
 
     def test_round_trip_simple(self):
         # simple three-node tree [1,2,3]
@@ -51,6 +51,6 @@ class TestCodec(unittest.TestCase):
         new_root = self.codec.deserialize(data)
         self.assertTrue(self.is_same_tree(root, new_root))
 
+
 if __name__ == "__main__":
     unittest.main()
-

@@ -1,6 +1,7 @@
 from collections import deque
 from typing import List
 
+
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         if endWord not in wordList or beginWord == endWord:
@@ -25,10 +26,10 @@ class Solution:
         steps = 1  # Includes beginWord
 
         for i in range(wordLength):
-            for c in 'abcdefghijklmnopqrstuvwxyz':
+            for c in "abcdefghijklmnopqrstuvwxyz":
                 if c == beginWord[i]:
                     continue
-                candidate = beginWord[:i] + c + beginWord[i+1:]
+                candidate = beginWord[:i] + c + beginWord[i + 1 :]
                 if candidate in wordIndex:
                     idx = wordIndex[candidate]
                     queue.append(idx)

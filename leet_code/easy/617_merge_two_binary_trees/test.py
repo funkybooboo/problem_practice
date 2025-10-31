@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution, TreeNode
 
+
 class TestSolution(unittest.TestCase):
 
     def setUp(self):
@@ -87,6 +88,7 @@ class TestSolution(unittest.TestCase):
         while result and result[-1] is None:
             result.pop()
         return result
+
 
 if __name__ == "__main__":
     unittest.main()

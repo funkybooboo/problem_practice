@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestNumDecodings(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -36,6 +37,7 @@ class TestNumDecodings(unittest.TestCase):
     def test_large_number_of_ways(self):
         self.assertEqual(self.solution.numDecodings("1111111111"), 89)
         # Fibonacci-like growth in decoding combinations
+
 
 if __name__ == "__main__":
     unittest.main()

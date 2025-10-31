@@ -1,6 +1,7 @@
 import unittest
 from solution import KthLargest
 
+
 class TestKthLargest(unittest.TestCase):
 
     def test_example_1(self):
@@ -29,6 +30,7 @@ class TestKthLargest(unittest.TestCase):
         self.assertEqual(kth.add(-5), -10)
         self.assertEqual(kth.add(-25), -10)
         self.assertEqual(kth.add(-1), -5)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,7 +1,9 @@
 from typing import List
 
+
 class DisjointSetUnion:
     """Union-Find (DSU) with path compression and union by size."""
+
     def __init__(self, n: int):
         # parent[i] points to the parent of i; root nodes point to themselves
         self.parent = list(range(n))
@@ -56,11 +58,11 @@ class Solution:
         # 4-directional neighbors (up/down/left/right)
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-        # 1) Union pass: connect border-touching 'O's to dummy, 
+        # 1) Union pass: connect border-touching 'O's to dummy,
         #    and union adjacent 'O's internally.
         for r in range(rows):
             for c in range(cols):
-                if board[r][c] != 'O':
+                if board[r][c] != "O":
                     continue
 
                 curr = node_id(r, c)
@@ -72,11 +74,11 @@ class Solution:
                 # Unite with any adjacent 'O's
                 for dr, dc in directions:
                     nr, nc = r + dr, c + dc
-                    if 0 <= nr < rows and 0 <= nc < cols and board[nr][nc] == 'O':
+                    if 0 <= nr < rows and 0 <= nc < cols and board[nr][nc] == "O":
                         dsu.union(curr, node_id(nr, nc))
 
         # 2) Flip pass: any 'O' not connected to dummy is surrounded -> flip it.
         for r in range(rows):
             for c in range(cols):
-                if board[r][c] == 'O' and not dsu.connected(node_id(r, c), dummy):
-                    board[r][c] = 'X'
+                if board[r][c] == "O" and not dsu.connected(node_id(r, c), dummy):
+                    board[r][c] = "X"

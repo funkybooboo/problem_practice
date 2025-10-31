@@ -3,13 +3,18 @@ from collections import deque
 
 
 class TreeNode:
-    def __init__(self, val: int = 0, left: Optional['TreeNode'] = None, right: Optional['TreeNode'] = None):
+    def __init__(
+        self,
+        val: int = 0,
+        left: Optional["TreeNode"] = None,
+        right: Optional["TreeNode"] = None,
+    ):
         self.val = val
         self.left = left
         self.right = right
 
     @staticmethod
-    def from_list(values: List[Optional[int]]) -> Optional['TreeNode']:
+    def from_list(values: List[Optional[int]]) -> Optional["TreeNode"]:
         if not values or values[0] is None:
             return None
 
@@ -31,7 +36,7 @@ class TreeNode:
         return root
 
     @staticmethod
-    def to_list(root: Optional['TreeNode']) -> List[Optional[int]]:
+    def to_list(root: Optional["TreeNode"]) -> List[Optional[int]]:
         if not root:
             return []
 
@@ -92,8 +97,7 @@ class Codec:
         tokens = [tok.strip() for tok in body.split(",")]
         # parse into values, using None for "null"
         values: List[Union[int, None]] = [
-            None if tok == "null" else int(tok)
-            for tok in tokens
+            None if tok == "null" else int(tok) for tok in tokens
         ]
 
         # first value must be non-null

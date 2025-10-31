@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestMinInterval(unittest.TestCase):
     def setUp(self):
         self.sln = Solution()
@@ -40,6 +41,7 @@ class TestMinInterval(unittest.TestCase):
         queries = [0, 4, 8]
         expected = [-1, -1, -1]
         self.assertEqual(self.sln.minInterval(intervals, queries), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

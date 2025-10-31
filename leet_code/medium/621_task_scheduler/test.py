@@ -1,20 +1,21 @@
 import unittest
 from solution import Solution
 
+
 class TestLeastInterval(unittest.TestCase):
 
     def test_1(self):
-        tasks = ["A","A","A","B","B","B"]
+        tasks = ["A", "A", "A", "B", "B", "B"]
         n = 2
         self.assertEqual(Solution().leastInterval(tasks, n), 8)
 
     def test_2(self):
-        tasks = ["A","C","A","B","D","B"]
+        tasks = ["A", "C", "A", "B", "D", "B"]
         n = 1
         self.assertEqual(Solution().leastInterval(tasks, n), 6)
 
     def test_3(self):
-        tasks = ["A","A","A", "B","B","B"]
+        tasks = ["A", "A", "A", "B", "B", "B"]
         n = 3
         self.assertEqual(Solution().leastInterval(tasks, n), 10)
 
@@ -32,6 +33,7 @@ class TestLeastInterval(unittest.TestCase):
         tasks = ["A", "B", "C", "D"]
         n = 1
         self.assertEqual(Solution().leastInterval(tasks, n), 4)
+
 
 if __name__ == "__main__":
     unittest.main()

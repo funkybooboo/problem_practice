@@ -1,6 +1,7 @@
 from typing import Generic, TypeVar, Dict, List, Tuple, Optional
 
-V = TypeVar('V')
+V = TypeVar("V")
+
 
 class TimeMap(Generic[V]):
     def __init__(self):

@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, Interval
 
+
 class TestCanAttendMeetings(unittest.TestCase):
 
     def test_1(self):
@@ -52,6 +53,7 @@ class TestCanAttendMeetings(unittest.TestCase):
         intervals = [Interval(0, 10), Interval(5, 15)]
         result = Solution().canAttendMeetings(intervals)
         self.assertFalse(result)
+
 
 if __name__ == "__main__":
     unittest.main()

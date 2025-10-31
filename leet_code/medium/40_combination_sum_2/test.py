@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCombinationSum2(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -15,28 +16,20 @@ class TestCombinationSum2(unittest.TestCase):
         self.assertCountEqual(
             normalized_result,
             normalized_expected,
-            msg=f"\nResult:   {result}\nExpected: {expected}"
+            msg=f"\nResult:   {result}\nExpected: {expected}",
         )
 
     def test_example1(self):
         candidates = [10, 1, 2, 7, 6, 1, 5]
         target = 8
-        expected = [
-            [1, 1, 6],
-            [1, 2, 5],
-            [1, 7],
-            [2, 6]
-        ]
+        expected = [[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]
         result = self.solution.combinationSum2(candidates, target)
         self.assertCombinationsEqual(result, expected)
 
     def test_example2(self):
         candidates = [2, 5, 2, 1, 2]
         target = 5
-        expected = [
-            [1, 2, 2],
-            [5]
-        ]
+        expected = [[1, 2, 2], [5]]
         result = self.solution.combinationSum2(candidates, target)
         self.assertCombinationsEqual(result, expected)
 
@@ -71,12 +64,10 @@ class TestCombinationSum2(unittest.TestCase):
     def test_multiple_combinations(self):
         candidates = [3, 1, 3, 5, 1, 1]
         target = 5
-        expected = [
-            [1, 1, 3],
-            [5]
-        ]
+        expected = [[1, 1, 3], [5]]
         result = self.solution.combinationSum2(candidates, target)
         self.assertCombinationsEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

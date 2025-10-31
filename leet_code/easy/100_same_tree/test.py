@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, TreeNode
 
+
 class TestIsSameTree(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -27,6 +28,7 @@ class TestIsSameTree(unittest.TestCase):
         p = TreeNode.from_list([1])
         q = None
         self.assertFalse(self.solution.isSameTree(p, q))
+
 
 if __name__ == "__main__":
     unittest.main()

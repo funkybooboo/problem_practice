@@ -4,6 +4,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 from typing import Optional, List
 
 
@@ -37,4 +38,3 @@ class Solution:
             result.append(node.val)
             node = node.next
         return result
-

@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCanPartition(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -44,6 +45,7 @@ class TestCanPartition(unittest.TestCase):
         nums = [0, 0, 0, 0]
         expected = True
         self.assertEqual(self.solution.canPartition(nums), expected)
+
 
 if __name__ == "__main__":
     unittest.main()

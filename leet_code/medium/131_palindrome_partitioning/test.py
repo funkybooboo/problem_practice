@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestPalindromePartitioning(unittest.TestCase):
     def setUp(self):
         self.solution = Solution()
@@ -14,7 +15,7 @@ class TestPalindromePartitioning(unittest.TestCase):
         self.assertEqual(
             normalized_result,
             normalized_expected,
-            msg=f"\nResult:   {result}\nExpected: {expected}"
+            msg=f"\nResult:   {result}\nExpected: {expected}",
         )
 
     def test_example1(self):
@@ -37,12 +38,15 @@ class TestPalindromePartitioning(unittest.TestCase):
 
     def test_mixed_case(self):
         s = "racecar"
-        expected = [["r", "a", "c", "e", "c", "a", "r"],
-                    ["r", "a", "cec", "a", "r"],
-                    ["r", "aceca", "r"],
-                    ["racecar"]]
+        expected = [
+            ["r", "a", "c", "e", "c", "a", "r"],
+            ["r", "a", "cec", "a", "r"],
+            ["r", "aceca", "r"],
+            ["racecar"],
+        ]
         result = self.solution.partition(s)
         self.assertPartitionsEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

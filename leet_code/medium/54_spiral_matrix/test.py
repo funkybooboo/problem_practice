@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -33,6 +34,7 @@ class TestSolution(unittest.TestCase):
         expected_output = [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
         solution = Solution()
         self.assertEqual(solution.spiralOrder(matrix), expected_output)
+
 
 if __name__ == "__main__":
     unittest.main()

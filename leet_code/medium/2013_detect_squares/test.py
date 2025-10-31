@@ -2,6 +2,7 @@ import unittest
 
 from solution import DetectSquares
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -23,6 +24,7 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(countSquares.count([3, 3]), 0)
         countSquares.add([2, 2])
         self.assertEqual(countSquares.count([2, 1]), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

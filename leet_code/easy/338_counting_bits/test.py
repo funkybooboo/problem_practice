@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -14,6 +15,7 @@ class TestSolution(unittest.TestCase):
     def test_example_3(self):
         sol = Solution()
         self.assertEqual(sol.countBits(4), [0, 1, 1, 2, 1])
+
 
 if __name__ == "__main__":
     unittest.main()

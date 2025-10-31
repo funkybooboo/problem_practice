@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
     def test_example_1(self):
         sol = Solution()
@@ -20,5 +21,6 @@ class TestSolution(unittest.TestCase):
         expected_output = []
         self.assertEqual(sol.findDuplicates(nums), expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

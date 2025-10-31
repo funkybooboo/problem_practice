@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         # We want the (len - k)th smallest element for kth largest

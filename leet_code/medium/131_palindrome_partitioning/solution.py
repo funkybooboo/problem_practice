@@ -1,12 +1,13 @@
 from typing import List
 
+
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
         """
         Returns all possible palindrome partitionings of the input string s.
         """
         result = []  # Final list to hold all valid palindrome partitions
-        part = []    # Current partition being built (list of substrings)
+        part = []  # Current partition being built (list of substrings)
 
         def dfs(start_index: int):
             """
@@ -20,13 +21,13 @@ class Solution:
 
             # Explore all substrings starting at start_index
             for end_index in range(start_index, len(s)):
-                substring = s[start_index:end_index + 1]
+                substring = s[start_index : end_index + 1]
 
                 # Check if the current substring is a palindrome
                 if self.is_palindrome(substring):
-                    part.append(substring)    # Choose
-                    dfs(end_index + 1)        # Explore
-                    part.pop()                # Un-choose (backtrack)
+                    part.append(substring)  # Choose
+                    dfs(end_index + 1)  # Explore
+                    part.pop()  # Un-choose (backtrack)
 
         # Start DFS from the beginning of the string
         dfs(0)

@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestCanFinish(unittest.TestCase):
     def test_simple_possible(self):
         # Example 1: 2 courses, one prerequisite 1 → 0
@@ -17,15 +18,12 @@ class TestCanFinish(unittest.TestCase):
 
     def test_larger_graphs(self):
         # A larger acyclic graph
-        self.assertTrue(Solution().canFinish(
-            5,
-            [[1, 0], [2, 0], [3, 1], [3, 2], [4, 3]]
-        ))
+        self.assertTrue(
+            Solution().canFinish(5, [[1, 0], [2, 0], [3, 1], [3, 2], [4, 3]])
+        )
         # A larger graph with a cycle
-        self.assertFalse(Solution().canFinish(
-            4,
-            [[1, 0], [2, 1], [3, 2], [1, 3]]
-        ))
+        self.assertFalse(Solution().canFinish(4, [[1, 0], [2, 1], [3, 2], [1, 3]]))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

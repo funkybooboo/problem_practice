@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestFindKthLargest(unittest.TestCase):
     def setUp(self):
         self.solver = Solution()
@@ -41,5 +42,6 @@ class TestFindKthLargest(unittest.TestCase):
         expected = 100000
         self.assertEqual(self.solver.findKthLargest(nums, k), expected)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

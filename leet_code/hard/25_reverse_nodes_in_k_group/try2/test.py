@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution, ListNode
 
+
 class TestReverseKGroup(unittest.TestCase):
 
     def test_1(self):
@@ -27,6 +28,7 @@ class TestReverseKGroup(unittest.TestCase):
         head = ListNode.from_list([1, 2, 3])
         result = Solution().reverseKGroup(head, 1)
         self.assertEqual(ListNode.to_list(result), [1, 2, 3])
+
 
 if __name__ == "__main__":
     unittest.main()

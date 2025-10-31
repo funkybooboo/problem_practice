@@ -1,5 +1,6 @@
 from typing import List, Set
 
+
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
         if numCourses <= 0:
@@ -11,8 +12,8 @@ class Solution:
             prereq_graph[course_id].append(prereq_id)
 
         completed: Set[int] = set()  # courses fully processed (no cycles downstream)
-        visiting: Set[int] = set()   # courses in the current DFS recursion stack
-        can_finish: bool = True      # global flag—set False if we detect a cycle
+        visiting: Set[int] = set()  # courses in the current DFS recursion stack
+        can_finish: bool = True  # global flag—set False if we detect a cycle
         output = []
 
         def dfs_visit(course_id: int) -> None:

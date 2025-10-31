@@ -5,6 +5,7 @@ import heapq
 ORIGIN_X = 0
 ORIGIN_Y = 0
 
+
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
         # Compute Euclidean distance from origin

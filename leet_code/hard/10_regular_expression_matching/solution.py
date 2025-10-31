@@ -2,6 +2,7 @@ import heapq
 from collections import defaultdict
 from typing import List, Tuple
 
+
 class Solution:
     def swimInWater(self, grid: List[List[int]]) -> int:
         # Helper function to create a node with height

@@ -1,14 +1,20 @@
 from typing import Optional, List
 from collections import deque
 
+
 class TreeNode:
-    def __init__(self, val: int = 0, left: Optional['TreeNode'] = None, right: Optional['TreeNode'] = None):
+    def __init__(
+        self,
+        val: int = 0,
+        left: Optional["TreeNode"] = None,
+        right: Optional["TreeNode"] = None,
+    ):
         self.val = val
         self.left = left
         self.right = right
 
     @staticmethod
-    def from_list(values: List[Optional[int]]) -> Optional['TreeNode']:
+    def from_list(values: List[Optional[int]]) -> Optional["TreeNode"]:
         if not values or values[0] is None:
             return None
 
@@ -30,7 +36,7 @@ class TreeNode:
         return root
 
     @staticmethod
-    def to_list(root: Optional['TreeNode']) -> List[Optional[int]]:
+    def to_list(root: Optional["TreeNode"]) -> List[Optional[int]]:
         if not root:
             return []
 
@@ -66,16 +72,14 @@ class Solution:
             """
             if not node:
                 # No branch, and no path at all (−inf so it never wins)
-                return 0, float('-inf')
+                return 0, float("-inf")
 
             # Recurse
-            left_branch,  left_best = helper(node.left)
+            left_branch, left_best = helper(node.left)
             right_branch, right_best = helper(node.right)
 
             # Best single‐branch path including this node
-            best_branch = max(node.val,
-                              node.val + left_branch,
-                              node.val + right_branch)
+            best_branch = max(node.val, node.val + left_branch, node.val + right_branch)
 
             # Best full path that *could* split at this node
             best_split = node.val + max(left_branch, 0) + max(right_branch, 0)

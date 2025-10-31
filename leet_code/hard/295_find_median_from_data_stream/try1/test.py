@@ -1,6 +1,7 @@
 import unittest
 from solution import MedianFinder
 
+
 class TestMedianFinder(unittest.TestCase):
     def test_example(self):
         mf = MedianFinder()
@@ -38,6 +39,7 @@ class TestMedianFinder(unittest.TestCase):
         for num in [100000, -100000, 0]:
             mf.addNum(num)
         self.assertAlmostEqual(mf.findMedian(), 0.0, places=5)
+
 
 if __name__ == "__main__":
     unittest.main()

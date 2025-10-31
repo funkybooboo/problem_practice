@@ -1,6 +1,7 @@
 import unittest
 from solution import Solution
 
+
 class TestFindCheapestPrice(unittest.TestCase):
     def test_example_1(self):
         n = 4
@@ -9,7 +10,9 @@ class TestFindCheapestPrice(unittest.TestCase):
         dst = 3
         k = 1
         expected_output = 700
-        self.assertEqual(Solution().findCheapestPrice(n, flights, src, dst, k), expected_output)
+        self.assertEqual(
+            Solution().findCheapestPrice(n, flights, src, dst, k), expected_output
+        )
 
     def test_example_2(self):
         n = 3
@@ -18,7 +21,9 @@ class TestFindCheapestPrice(unittest.TestCase):
         dst = 2
         k = 1
         expected_output = 200
-        self.assertEqual(Solution().findCheapestPrice(n, flights, src, dst, k), expected_output)
+        self.assertEqual(
+            Solution().findCheapestPrice(n, flights, src, dst, k), expected_output
+        )
 
     def test_example_3(self):
         n = 3
@@ -27,7 +32,9 @@ class TestFindCheapestPrice(unittest.TestCase):
         dst = 2
         k = 0
         expected_output = 500
-        self.assertEqual(Solution().findCheapestPrice(n, flights, src, dst, k), expected_output)
+        self.assertEqual(
+            Solution().findCheapestPrice(n, flights, src, dst, k), expected_output
+        )
 
     def test_no_flights(self):
         n = 2
@@ -36,7 +43,9 @@ class TestFindCheapestPrice(unittest.TestCase):
         dst = 1
         k = 0
         expected_output = -1
-        self.assertEqual(Solution().findCheapestPrice(n, flights, src, dst, k), expected_output)
+        self.assertEqual(
+            Solution().findCheapestPrice(n, flights, src, dst, k), expected_output
+        )
 
     def test_max_stops(self):
         n = 5
@@ -45,7 +54,9 @@ class TestFindCheapestPrice(unittest.TestCase):
         dst = 4
         k = 3
         expected_output = 1000
-        self.assertEqual(Solution().findCheapestPrice(n, flights, src, dst, k), expected_output)
+        self.assertEqual(
+            Solution().findCheapestPrice(n, flights, src, dst, k), expected_output
+        )
 
     def test_no_path(self):
         n = 4
@@ -54,7 +65,10 @@ class TestFindCheapestPrice(unittest.TestCase):
         dst = 3
         k = 0
         expected_output = -1
-        self.assertEqual(Solution().findCheapestPrice(n, flights, src, dst, k), expected_output)
+        self.assertEqual(
+            Solution().findCheapestPrice(n, flights, src, dst, k), expected_output
+        )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

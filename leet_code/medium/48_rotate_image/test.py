@@ -2,6 +2,7 @@ import unittest
 
 from solution import Solution
 
+
 class TestSolution(unittest.TestCase):
 
     def test_example_1(self):
@@ -27,6 +28,7 @@ class TestSolution(unittest.TestCase):
         expected = [[7, 4, 1], [8, 5, 2], [9, 6, 3]]
         Solution().rotate(matrix)
         self.assertEqual(matrix, expected)
+
 
 if __name__ == "__main__":
     unittest.main()

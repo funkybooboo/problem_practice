@@ -19,5 +19,6 @@ class TestSingleNumber(unittest.TestCase):
     def test_example_5(self):
         self.assertEqual(Solution().singleNumber([7, 6, 6, 7, 8]), 8)
 
+
 if __name__ == "__main__":
     unittest.main()
