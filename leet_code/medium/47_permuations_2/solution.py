@@ -5,7 +5,7 @@ class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         permutations: List[List[int]] = []
         current_permutation: List[int] = []
-        counts: Dict[int, int] = { n: 0 for n in nums }
+        counts: Dict[int, int] = {n: 0 for n in nums}
         for num in nums:
             counts[num] += 1
 
