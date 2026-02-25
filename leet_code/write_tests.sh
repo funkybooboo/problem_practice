@@ -40,11 +40,11 @@ if [ ! -f "$TEST" ]; then
 fi
 
 # Create the prompt for opencode
-PROMPT="Read README.md and solution.py. Overwrite test.py with comprehensive unittest tests covering: examples, edge cases (empty/single/min/max), boundaries, and domain-specific cases. Use descriptive names, add comments for complex cases. Keep unittest structure (TestSolution class, setUp). Only edit test.py. No explanations."
+PROMPT="Read README.md and solution.py. Edit test.py to replace it with comprehensive unittest tests covering: examples from README, edge cases (empty/single/min/max values), boundaries, and domain-specific cases. Use descriptive test names and add comments for complex cases. Keep unittest structure (TestSolution class, setUp if needed)."
 
-# Run opencode with the files attached using Anthropic Sonnet 4.5 (headless mode)
+# Run opencode with the files attached using Anthropic Sonnet 4.5
 cd "$PROBLEM_DIR"
-opencode run --model anthropic/claude-sonnet-4-5 --format default --file README.md --file solution.py --file test.py -- "$PROMPT" > /dev/null 2>&1
+opencode run --model anthropic/claude-sonnet-4-5 --file README.md --file solution.py --file test.py -- "$PROMPT"
 
 EXIT_CODE=$?
 if [ $EXIT_CODE -ne 0 ]; then
