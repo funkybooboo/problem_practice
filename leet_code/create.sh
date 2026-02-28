@@ -72,3 +72,7 @@ echo "Successfully created:"
 echo "  - $DIR_PATH/README.md"
 echo "  - $DIR_PATH/solution.py"
 echo "  - $DIR_PATH/test.py"
+
+cd "$DIR_PATH"
+pwd
+
