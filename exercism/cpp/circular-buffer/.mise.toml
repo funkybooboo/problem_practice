@@ -1,0 +1,19 @@
+[tools]
+cmake = "latest"
+
+[tasks.build]
+description = "Build the project"
+run = "cmake -S . -B build -DEXERCISM_RUN_ALL_TESTS=ON && cmake --build build"
+
+[tasks.test]
+description = "Run all tests"
+run = "./build/circular-buffer"
+depends = ["build"]
+
+[tasks.clean]
+description = "Clean build artifacts"
+run = "rm -rf build"
+
+[tasks.rebuild]
+description = "Clean and rebuild"
+run = "mise run clean && mise run build"
