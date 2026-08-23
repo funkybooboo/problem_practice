@@ -2,21 +2,32 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 char *abbreviate(const char *phrase) {
-    char *abbereviation = "";
-    size_t phrase_len = strlen(phrase);
-    bool prev_is_space = false;
-    char space = ' ';
-    for (size_t i = 0; i < phrase_len; i++) {
-        if (phrase[i] == space || (i == 0 && phrase[i] != space)) {
-            prev_is_space = true;
-            continue;
-        }
-        if (prev_is_space) {
-            abbereviation += toupper(phrase[i]);
-        }
-        prev_is_space = false;
+    if (phrase == NULL || strlen(phrase) == 0) {
+        return NULL;
     }
-    return abbereviation;
+
+    char *abbrev = malloc(strlen(phrase) + 1);
+    if (!abbrev) {
+        return NULL;
+    }
+
+    size_t j = 0;
+    bool new_word = true;
+
+    for (size_t i = 0; phrase[i] != '\0'; i++) {
+        if (isalpha(phrase[i])) {
+            if (new_word) {
+                abbrev[j++] = toupper(phrase[i]);
+                new_word = false;
+            }
+        } else if (phrase[i] != '\'') {
+            new_word = true;
+        }
+    }
+
+    abbrev[j] = '\0';
+    return abbrev;
 }
